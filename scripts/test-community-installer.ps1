@@ -28,7 +28,8 @@ try {
     $shell = New-Object -ComObject WScript.Shell
     $shortcut = $shell.CreateShortcut($shortcutPath)
     if (-not (Test-Path -LiteralPath $shortcutPath) -or $shortcut.Arguments -notlike ('*'+$installRoot+'\scripts\launch-community.ps1*')) {
-        throw 'Desktop shortcut does not reference this installed community edition.'
+        $desktopProperty = (Select-String -LiteralPath $installLog -Pattern 'DesktopFolder = ' | Select-Object -Last 2 | ForEach-Object { $_.Line }) -join '; '
+        throw ('Desktop shortcut does not reference this installed community edition. Expected: '+$shortcutPath+'; actual arguments: '+$shortcut.Arguments+'; MSI desktop: '+$desktopProperty)
     }
     $result.desktopShortcut = $true
     $powershell = Join-Path $env:SystemRoot 'System32\WindowsPowerShell\v1.0\powershell.exe'
