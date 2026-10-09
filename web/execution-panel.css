@@ -1,0 +1,20 @@
+.execution-editor,.label-repair{margin:16px 0;padding:14px;border:1px solid var(--ui-border,#dce2eb);border-radius:12px;background:var(--ui-surface,#fff);color:var(--ui-text,#18253a)}
+.execution-editor summary,.label-repair summary{cursor:pointer;font-weight:600;padding:6px 0}
+.execution-editor p,.label-repair p{line-height:1.6;font-size:14px}
+.execution-editor h4{margin:22px 0 10px}
+.execution-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:10px}
+.execution-grid label{display:flex;flex-direction:column;gap:6px;font-size:13px}
+.execution-grid input,.execution-grid select{min-width:0;width:100%;min-height:38px}
+.execution-row{min-width:0;margin:12px 0;padding:12px;border:1px solid var(--ui-border,#dce2eb);border-radius:10px}
+.execution-row legend{max-width:100%;font-size:14px;font-weight:600;overflow-wrap:anywhere}
+.execution-editor .formal-label-text,.label-repair .formal-label-text{white-space:pre-wrap;overflow-wrap:anywhere;background:var(--ui-raised,#eef3f8);border-radius:6px;padding:8px;color:var(--ui-text,#18253a)}
+.combat-row{padding:10px 0;border-bottom:1px solid var(--ui-border,#dce2eb)}
+.label-font-preview{margin:12px 0;padding:22px 18px;background:linear-gradient(120deg,#252321,#151e27);border:1px solid #635344;border-radius:10px;display:grid;gap:16px}
+.label-font-preview span{font-size:20px;line-height:1.6;letter-spacing:.03em;text-shadow:0 1px 2px #18100b}
+.label-video-preview{position:relative;container-type:size;margin:12px 0;background:#17191f;overflow:hidden;border-radius:8px;isolation:isolate}
+.label-video-preview video{display:block;width:100%;height:100%;object-fit:contain}
+.label-preview-overlays{position:absolute;inset:0;pointer-events:none}
+.label-preview-overlays span{position:absolute;display:block;box-sizing:border-box;padding:.9cqh;background:#14171a;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.3;text-shadow:0 0 1px #211a14;overflow:hidden}
+.playback-warnings{font-size:13px;line-height:1.7;color:var(--ui-warning,#8a5a11);padding-left:20px}
+.execution-editor input:focus-visible,.execution-editor select:focus-visible,.label-repair input:focus-visible{outline:2px solid var(--ui-cyan,#137b99);outline-offset:2px}
+@media(max-width:520px){.execution-grid{grid-template-columns:1fr}.label-font-preview{padding:16px}.execution-row{padding:8px}}

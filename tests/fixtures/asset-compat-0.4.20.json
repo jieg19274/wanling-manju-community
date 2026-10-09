@@ -1,0 +1,716 @@
+{
+  "version": "0.4.20",
+  "synthetic": true,
+  "referencePngBase64": "iVBORw0KGgoAAAANSUhEUgAAAGAAAABACAIAAABqVuVZAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAwUlEQVR4nO3ZwQnDQADEQJd0JaQE9V9N/oH4E8L6MXAVCK18tq/zyjnfIVzonFtFAAqgflkJgwIoBvW/R42JBVAMysRaXWg1KIBiUCaWBvXM7woiHUAxKBNLg5r3WKQDKAZlYs2746IYQDEoE2seIC+rARSDMrE0qHmMRTqAYlAm1jw6LooBFIMysR5y/FkNoBiUiaVBzXss0gEUgzKx5t1xUQygGJSJNQ+Ql9UAikGZWBrUPMYiHUAxKBNrHp2P8wZkDQEPYupO2AAAAABJRU5ErkJggg==",
+  "cases": [
+    {
+      "kind": "scene",
+      "project": {
+        "id": "50322f91-01fd-4913-870a-db312e783eab",
+        "name": "0.4.20 合成兼容样例",
+        "mode": "standard",
+        "visualStyle": {
+          "name": "",
+          "description": ""
+        },
+        "productionRules": {
+          "segmentDurationSec": 30,
+          "minChapters": 1,
+          "maxChapters": 3,
+          "chapterStrategy": "story",
+          "fixedChapters": 3,
+          "delivery": "package"
+        },
+        "aspectRatio": "16:9",
+        "assets": [
+          {
+            "id": "room",
+            "kind": "scene",
+            "name": "房间",
+            "identity": "窗户完整，门边空间清晰的室内。",
+            "voice": "",
+            "states": [],
+            "images": [
+              {
+                "id": "room-image",
+                "role": "main",
+                "mediaPath": "compatibility/scene-room.png",
+                "fileHash": "620564251113d3d86bf88c83fe93275aa3072e740652b941b99a869461b528ac",
+                "createdAt": "2026-10-01T00:00:00Z",
+                "source": "upload",
+                "inputHash": "d86d0e4b1bc4e59e663a5e07978bd81935b3c0e94af1dfd4eeac5aed5e34cc62",
+                "review": {
+                  "status": "approved",
+                  "checks": {
+                    "identity": true,
+                    "state": true,
+                    "shape": true,
+                    "clothing": true
+                  },
+                  "reviewedAt": "2026-10-01T00:00:00Z"
+                }
+              }
+            ]
+          }
+        ],
+        "textModel": {
+          "name": "",
+          "modelId": "",
+          "adapterPath": ""
+        },
+        "imageModel": {
+          "name": "",
+          "modelId": "",
+          "adapterPath": ""
+        },
+        "videoModel": {
+          "name": "离线模拟",
+          "modelId": "offline-compat",
+          "adapterPath": "tests/fixtures/video-adapter.mjs",
+          "capabilities": {
+            "maxDurationSec": 30,
+            "maxReferences": 30,
+            "maxPromptChars": 20000,
+            "nativeAudio": true
+          }
+        },
+        "createdAt": "2026-10-09T07:48:38.666Z",
+        "updatedAt": "2026-10-09T07:48:38.666Z",
+        "episodes": [
+          {
+            "id": "31dce0c7-1af3-49c7-b5cb-edf89ec97906",
+            "number": 1,
+            "title": "隔离样例",
+            "sourceText": "人物发现屋外来客，走到门边查看来客的身影。人物确认同伴安全，伸手阻止同伴继续向门外走去。人物发现屋外来客，走到门边查看来客的身影。人物确认同伴安全，伸手阻止同伴继续向门外走去。人物发现屋外来客，走到门边查看来客的身影。人物确认同伴安全，伸手阻止同伴继续向门外走去。人物发现屋外来客，走到门边查看来客的身影。人物确认同伴安全，伸手阻止同伴继续向门外走去。",
+            "highlightReport": "发现来客，查看身影，确认同伴安全后阻止开门，保留因果与反应。",
+            "scriptBeats": [
+              {
+                "id": "70f89e98-81ad-4737-872b-5b4640bd8f25",
+                "event": "人物发现屋外来客，走到门边查看来客的身影。",
+                "reaction": "人物确认同伴安全，伸手阻止同伴继续向门外走去。",
+                "dialogue": [
+                  "人物：先不要开门。"
+                ],
+                "os": [
+                  "人物：先看看。"
+                ],
+                "floatLabels": [
+                  "场景：房间"
+                ],
+                "systemPanels": [
+                  "提示：门外有人。"
+                ],
+                "sourceQuote": "人物发现屋外来客，走到门边查看来客的身影。人物确认同伴安全，伸手阻止同伴继续向门外走去。人物发现屋外来客，走到门边查看来客的身影。人物确认同伴安全，伸手阻止同伴继续向门外走去。人物发现屋外来客，走到门边查看来客的身影。人物确认同伴安全，伸手阻止同伴继续向门外走去。人物发现屋外来客，走到门边查看来客的身影。人物确认同伴安全，伸手阻止同伴继续向门外走去。"
+              }
+            ],
+            "visualStyle": {
+              "name": "",
+              "description": ""
+            },
+            "scriptVersion": 1,
+            "scriptHistory": [],
+            "segments": [
+              {
+                "id": "f5bcb100-ccdd-4e76-b156-5841dcf7fd9a",
+                "number": 1,
+                "beatId": "70f89e98-81ad-4737-872b-5b4640bd8f25",
+                "durationSec": 30,
+                "visualPlan": "房间门边近景到中景，末帧保持伸手阻止的动作。",
+                "anchorPlan": {
+                  "fromX": 25,
+                  "toX": 75,
+                  "level": "medium"
+                },
+                "effectIds": [],
+                "effectVersions": {},
+                "effectEvidence": {},
+                "artifacts": [
+                  {
+                    "id": "e604f7f0-5d2a-4ccf-a588-af01fdeffffd",
+                    "kind": "prompt",
+                    "createdAt": "2026-10-01T00:00:00Z",
+                    "sourceHash": "c959ee282d07e02b6f939ddedff94137443ba682757c56196c975091d4840bd7",
+                    "content": "【最高约束】严格按本段子镜时间顺序生成；禁止新增人物、场景、动作或对白，禁止跳镜、提前演出下一段和重复拉长同一动作。锁定剧本中的因果、反应与声音须完整保留。\n【可发声文本边界】本段仅有1句正式人物对白、1句正式内心OS。只按逐镜声源和时序说出【对白】与【内心OS】引用的原句，各句只说一次；禁止自动新增解说、旁白、补词或复述。事件、人物反应、动作描述、故事梗概、参考图说明、身份浮签、系统文字和声源指令均不是待朗读台词，不得说出来。原文已有OS保留对应角色自己的内心声，不能改成独立解说员。人物对白必须清晰有声，不得以静音或字幕替代。\n【屏幕文字边界】叠加文字仅允许正式剧本指定的身份浮签和系统提示；原文没有的系统提示不得新增。禁止自动添加对白字幕、OS字幕、解说字幕、说明文字、镜头编号或渲染提示词。身份浮签默认只绑定对应可见角色；原文明确指定被提及时显示的身份浮签，仅作为提及HUD，不引入该角色出场，不得贴在其他人物脸上。POV主角的身份浮签只能作为主观HUD，不得贴在对手脸上。账页、请帖等物理道具上的原剧情字样属于道具内容，按原剧情保留，不属于叠加字幕；参考图自带的其他文字不得变成剧情事实。\n【正式视频提示词｜片段 1｜30 秒】\n【逐镜参考范围】全部附件是资产库，不代表每镜全部出场。每镜只使用该镜参考资产，未列出的角色和道具不得被图片诱导提前入场；衣饰和道具图片背景不是实际场景。\n【参考图使用】人物使用完整四视图＋大头照，整张共同锁定同一人物的五官、眼神、发型、体态、衣饰与材质；各视角属于同一角色。场景图锁定空间。参考图中的拼图格线、棚拍背景和并列多视角不得出现在连续成片画面中。\n【附件图1】房间｜主图；只定义本镜场景空间，不定义人物身份或摄影机主人；其他人物参考图中的背景不能覆盖此场景。\n【剧情与动作】人物发现屋外来客，走到门边查看来客的身影。\n【人物反应】人物确认同伴安全，伸手阻止同伴继续向门外走去。\n【画面与机位】房间门边近景到中景，末帧保持伸手阻止的动作。\n【镜头节奏】本段按下列子镜时间码切换独立景别，不拍成单个持续推拉运镜；对白和内心OS从所标子镜开始，可自然跨后续子镜说完，切镜不得截断声音或压缩台词。\n【声音生成合同】完整原生音轨必须生成并保留。逐镜【对白】由对应角色真实说出口，口型同步；逐镜【内心OS】也必须由对应角色本人声线逐字发声，嘴型不动，带轻微内心混响。环境音与音效在发声时压低，不得用环境声代替台词、用画面字幕代替声音，或因角色当前不是人形而省略其心声。禁止第三方解说、旁白及额外配音。\n【声音字段口径】标为“无”的镜头不新增发声；有台词的镜头只能从该子镜起点开始，不能提前，允许跨后续镜头自然说完。对白与内心OS是两种声音字段，均须实际进入成片音轨；同一句只说一次，不得重复。\n### 子镜1｜0–2秒｜首帧主体近景\n【场景与前置】房间；前置状态1\n【正式画面动作】人物发现屋外来客，走到门边查看来客的身影。第1个执行节拍\n【可见结果】可见结果1\n【参考资产】房间\n【对白】人物：先不要开门。\n【内心OS】无（此窗口没有新台词或跨镜续说）\n【旁白】无\n【浮签】无\n【系统信息】无\n【停止边界/物理末帧】末帧状态1。不提前演下一镜。\n### 子镜2｜2–6.667秒｜主体与场景中景\n【场景与前置】房间；前置状态2\n【正式画面动作】人物发现屋外来客，走到门边查看来客的身影。第2个执行节拍\n【可见结果】可见结果2\n【参考资产】房间\n【对白】无新台词；承接前镜已开始的对白，最迟6.667秒前结束，不重说；继续声音的角色：人物\n【内心OS】无（此窗口没有新台词或跨镜续说）\n【旁白】无\n【浮签】场景：房间\n【系统信息】无\n【停止边界/物理末帧】末帧状态2。不提前演下一镜。\n### 子镜3｜6.667–11.333秒｜动作近景\n【场景与前置】房间；前置状态3\n【正式画面动作】人物发现屋外来客，走到门边查看来客的身影。第3个执行节拍\n【可见结果】可见结果3\n【参考资产】房间\n【对白】无（此窗口没有新台词或跨镜续说）\n【内心OS】人物：先看看。\n【旁白】无\n【浮签】无\n【系统信息】无\n【停止边界/物理末帧】末帧状态3。不提前演下一镜。\n### 子镜4｜11.333–16秒｜空间关系镜\n【场景与前置】房间；前置状态4\n【正式画面动作】人物发现屋外来客，走到门边查看来客的身影。第4个执行节拍\n【可见结果】可见结果4\n【参考资产】房间\n【对白】无（此窗口没有新台词或跨镜续说）\n【内心OS】无（此窗口没有新台词或跨镜续说）\n【旁白】无\n【浮签】无\n【系统信息】提示：门外有人。\n【停止边界/物理末帧】末帧状态4。不提前演下一镜。\n### 子镜5｜16–20.667秒｜动作结果镜\n【场景与前置】房间；前置状态5\n【正式画面动作】人物发现屋外来客，走到门边查看来客的身影。第5个执行节拍\n【可见结果】可见结果5\n【参考资产】房间\n【对白】无（此窗口没有新台词或跨镜续说）\n【内心OS】无（此窗口没有新台词或跨镜续说）\n【旁白】无\n【浮签】无\n【系统信息】无\n【停止边界/物理末帧】末帧状态5。不提前演下一镜。\n### 子镜6｜20.667–25.333秒｜人物反应近景\n【场景与前置】房间；前置状态6\n【正式画面动作】人物确认同伴安全，伸手阻止同伴继续向门外走去。第6个执行节拍\n【可见结果】可见结果6\n【参考资产】房间\n【对白】无（此窗口没有新台词或跨镜续说）\n【内心OS】无（此窗口没有新台词或跨镜续说）\n【旁白】无\n【浮签】无\n【系统信息】无\n【停止边界/物理末帧】末帧状态6。不提前演下一镜。\n### 子镜7｜25.333–30秒｜末帧交接镜\n【场景与前置】房间；前置状态7\n【正式画面动作】人物确认同伴安全，伸手阻止同伴继续向门外走去。第7个执行节拍\n【可见结果】可见结果7\n【参考资产】房间\n【对白】无（此窗口没有新台词或跨镜续说）\n【内心OS】无（此窗口没有新台词或跨镜续说）\n【旁白】无\n【浮签】无\n【系统信息】无\n【停止边界/物理末帧】末帧状态7。不提前演下一镜。\n【场景锚点】房间；窗户完整，门边空间清晰的室内。\n【可见信息层】只显示下列正式内容；对白和内心OS不生成画面字幕、台词转写或OS字卡。\n人物浮签（模型直出）：无（本段无正式人物浮签）\n场景浮签（模型直出）：场景：房间\n时间浮签（模型直出）：无（本段无正式时间浮签）\n设定/系统浮签：\n系统面板（模型直出或空面板后期精确覆盖）：提示：门外有人。\n【禁止】不得删减事件、对白、OS、人物反应或可见信息；不得添加新剧情。"
+                  },
+                  {
+                    "id": "d12970ec-444f-44ca-8a0c-d1c969d4ceff",
+                    "kind": "video",
+                    "createdAt": "2026-10-01T00:00:00Z",
+                    "sourceHash": "c959ee282d07e02b6f939ddedff94137443ba682757c56196c975091d4840bd7",
+                    "generationHash": "b2526084f6fbd786c8d5fb756e27fcf35809d6bd26cb3ff6a4d6d1b62ea2af78",
+                    "referenceHashes": [
+                      {
+                        "imageId": "room-image",
+                        "hash": "620564251113d3d86bf88c83fe93275aa3072e740652b941b99a869461b528ac"
+                      }
+                    ],
+                    "mediaPath": "compatibility/scene-video.mp4",
+                    "review": {
+                      "status": "approved",
+                      "notes": "合成测试：仅供离线回归",
+                      "reviewedAt": "2026-10-01T00:00:00Z"
+                    }
+                  }
+                ],
+                "selected": {
+                  "prompt": "e604f7f0-5d2a-4ccf-a588-af01fdeffffd",
+                  "video": "d12970ec-444f-44ca-8a0c-d1c969d4ceff"
+                },
+                "subshots": [
+                  {
+                    "id": "31e24b60-5101-46c2-8934-3c9cab7b4145",
+                    "startSec": 0,
+                    "endSec": 2,
+                    "framing": "首帧主体近景",
+                    "action": "人物发现屋外来客，走到门边查看来客的身影。第1个执行节拍",
+                    "lineRefs": {
+                      "dialogue": [
+                        0
+                      ],
+                      "os": [],
+                      "floatLabels": [],
+                      "systemPanels": []
+                    },
+                    "evidence": "人物发现屋外来客，走到门边查看来客的身影。",
+                    "location": "房间",
+                    "priorState": "前置状态1",
+                    "result": "可见结果1",
+                    "endFrame": "末帧状态1",
+                    "assetIds": [
+                      "room"
+                    ]
+                  },
+                  {
+                    "id": "c348f608-f99d-4552-a69b-ccf0c9cae11a",
+                    "startSec": 2,
+                    "endSec": 6.667,
+                    "framing": "主体与场景中景",
+                    "action": "人物发现屋外来客，走到门边查看来客的身影。第2个执行节拍",
+                    "lineRefs": {
+                      "dialogue": [],
+                      "os": [],
+                      "floatLabels": [
+                        0
+                      ],
+                      "systemPanels": []
+                    },
+                    "evidence": "人物发现屋外来客，走到门边查看来客的身影。",
+                    "location": "房间",
+                    "priorState": "前置状态2",
+                    "result": "可见结果2",
+                    "endFrame": "末帧状态2",
+                    "assetIds": [
+                      "room"
+                    ]
+                  },
+                  {
+                    "id": "53667c0c-6897-414d-9909-a19a08468c90",
+                    "startSec": 6.667,
+                    "endSec": 11.333,
+                    "framing": "动作近景",
+                    "action": "人物发现屋外来客，走到门边查看来客的身影。第3个执行节拍",
+                    "lineRefs": {
+                      "dialogue": [],
+                      "os": [
+                        0
+                      ],
+                      "floatLabels": [],
+                      "systemPanels": []
+                    },
+                    "evidence": "人物发现屋外来客，走到门边查看来客的身影。",
+                    "location": "房间",
+                    "priorState": "前置状态3",
+                    "result": "可见结果3",
+                    "endFrame": "末帧状态3",
+                    "assetIds": [
+                      "room"
+                    ]
+                  },
+                  {
+                    "id": "cacfc4af-0138-4865-8566-cfabc33fedce",
+                    "startSec": 11.333,
+                    "endSec": 16,
+                    "framing": "空间关系镜",
+                    "action": "人物发现屋外来客，走到门边查看来客的身影。第4个执行节拍",
+                    "lineRefs": {
+                      "dialogue": [],
+                      "os": [],
+                      "floatLabels": [],
+                      "systemPanels": [
+                        0
+                      ]
+                    },
+                    "evidence": "人物发现屋外来客，走到门边查看来客的身影。",
+                    "location": "房间",
+                    "priorState": "前置状态4",
+                    "result": "可见结果4",
+                    "endFrame": "末帧状态4",
+                    "assetIds": [
+                      "room"
+                    ]
+                  },
+                  {
+                    "id": "138c492e-a11b-499f-a232-e2d12d7ff3fc",
+                    "startSec": 16,
+                    "endSec": 20.667,
+                    "framing": "动作结果镜",
+                    "action": "人物发现屋外来客，走到门边查看来客的身影。第5个执行节拍",
+                    "lineRefs": {
+                      "dialogue": [],
+                      "os": [],
+                      "floatLabels": [],
+                      "systemPanels": []
+                    },
+                    "evidence": "人物发现屋外来客，走到门边查看来客的身影。",
+                    "location": "房间",
+                    "priorState": "前置状态5",
+                    "result": "可见结果5",
+                    "endFrame": "末帧状态5",
+                    "assetIds": [
+                      "room"
+                    ]
+                  },
+                  {
+                    "id": "dc434147-c08c-44e6-820b-ecf8de9d13d5",
+                    "startSec": 20.667,
+                    "endSec": 25.333,
+                    "framing": "人物反应近景",
+                    "action": "人物确认同伴安全，伸手阻止同伴继续向门外走去。第6个执行节拍",
+                    "lineRefs": {
+                      "dialogue": [],
+                      "os": [],
+                      "floatLabels": [],
+                      "systemPanels": []
+                    },
+                    "evidence": "人物确认同伴安全，伸手阻止同伴继续向门外走去。",
+                    "location": "房间",
+                    "priorState": "前置状态6",
+                    "result": "可见结果6",
+                    "endFrame": "末帧状态6",
+                    "assetIds": [
+                      "room"
+                    ]
+                  },
+                  {
+                    "id": "3ff76cf2-82e9-4aaa-a1db-60bf7841ba81",
+                    "startSec": 25.333,
+                    "endSec": 30,
+                    "framing": "末帧交接镜",
+                    "action": "人物确认同伴安全，伸手阻止同伴继续向门外走去。第7个执行节拍",
+                    "lineRefs": {
+                      "dialogue": [],
+                      "os": [],
+                      "floatLabels": [],
+                      "systemPanels": []
+                    },
+                    "evidence": "人物确认同伴安全，伸手阻止同伴继续向门外走去。",
+                    "location": "房间",
+                    "priorState": "前置状态7",
+                    "result": "可见结果7",
+                    "endFrame": "末帧状态7",
+                    "assetIds": [
+                      "room"
+                    ]
+                  }
+                ],
+                "subshotsAuto": true,
+                "subshotsReviewed": true,
+                "shotContractVersion": 2,
+                "assetBindings": [
+                  {
+                    "assetId": "room",
+                    "imageId": "room-image"
+                  }
+                ]
+              }
+            ],
+            "sourceReviewedHash": "b4d1306dd5b9e7351179fa0b38867326c8393538fa503410745f50bc211f4208",
+            "highlightReviewedHash": "f7e35f73b77c52d87e72eb8c3946264c5d28bc8d27105d4bb8554f938918733d",
+            "scriptLockedHash": "437f270c823ac4bb587e60b099cacf3de9a4bb03a7d5a5c9668a538a35a9ea36",
+            "auditApprovedHash": "4ace695844eab1ac240d9aa89298cdac04035f2506ed6c9ac6e8403b2271c382"
+          }
+        ]
+      },
+      "oldGenerationHash": "b2526084f6fbd786c8d5fb756e27fcf35809d6bd26cb3ff6a4d6d1b62ea2af78",
+      "currentAuditIssues": [],
+      "encoding021GenerationHash": "5f1482f51ef355d13ad525a0a625d788b15ce049cc61969f986e16982ab0b593"
+    },
+    {
+      "kind": "whole-character",
+      "project": {
+        "id": "30d105f1-e894-4ed1-95db-3350679acd00",
+        "name": "0.4.20 合成兼容样例",
+        "mode": "standard",
+        "visualStyle": {
+          "name": "",
+          "description": ""
+        },
+        "productionRules": {
+          "segmentDurationSec": 30,
+          "minChapters": 1,
+          "maxChapters": 3,
+          "chapterStrategy": "story",
+          "fixedChapters": 3,
+          "delivery": "package"
+        },
+        "aspectRatio": "16:9",
+        "assets": [
+          {
+            "id": "person",
+            "kind": "character",
+            "name": "人物",
+            "identity": "合成测试人物，健康清醒。",
+            "voice": "合成测试清晰自然声线",
+            "states": [],
+            "images": [
+              {
+                "id": "person-image",
+                "role": "turnaround",
+                "layout": "three-view-portrait",
+                "mediaPath": "compatibility/whole-person.png",
+                "fileHash": "620564251113d3d86bf88c83fe93275aa3072e740652b941b99a869461b528ac",
+                "createdAt": "2026-10-01T00:00:00Z",
+                "source": "upload",
+                "inputHash": "8508c678977ce670023f5a0d7c3e2c142b70649ed8e56aa9c3bed2334a11dcaf",
+                "review": {
+                  "status": "approved",
+                  "checks": {
+                    "identity": true,
+                    "state": true,
+                    "shape": true,
+                    "clothing": true
+                  },
+                  "reviewedAt": "2026-10-01T00:00:00Z"
+                }
+              }
+            ]
+          },
+          {
+            "id": "room",
+            "kind": "scene",
+            "name": "房间",
+            "identity": "窗户完整，门边空间清晰的室内。",
+            "voice": "",
+            "states": [],
+            "images": [
+              {
+                "id": "room-image",
+                "role": "main",
+                "mediaPath": "compatibility/whole-room.png",
+                "fileHash": "620564251113d3d86bf88c83fe93275aa3072e740652b941b99a869461b528ac",
+                "createdAt": "2026-10-01T00:00:00Z",
+                "source": "upload",
+                "inputHash": "d86d0e4b1bc4e59e663a5e07978bd81935b3c0e94af1dfd4eeac5aed5e34cc62",
+                "review": {
+                  "status": "approved",
+                  "checks": {
+                    "identity": true,
+                    "state": true,
+                    "shape": true,
+                    "clothing": true
+                  },
+                  "reviewedAt": "2026-10-01T00:00:00Z"
+                }
+              }
+            ]
+          }
+        ],
+        "textModel": {
+          "name": "",
+          "modelId": "",
+          "adapterPath": ""
+        },
+        "imageModel": {
+          "name": "",
+          "modelId": "",
+          "adapterPath": ""
+        },
+        "videoModel": {
+          "name": "离线模拟",
+          "modelId": "offline-compat",
+          "adapterPath": "tests/fixtures/video-adapter.mjs",
+          "capabilities": {
+            "maxDurationSec": 30,
+            "maxReferences": 30,
+            "maxPromptChars": 20000,
+            "nativeAudio": true
+          }
+        },
+        "createdAt": "2026-10-09T07:48:38.688Z",
+        "updatedAt": "2026-10-09T07:48:38.688Z",
+        "episodes": [
+          {
+            "id": "31df160f-5fc1-421f-9548-6ee9e718d46e",
+            "number": 1,
+            "title": "隔离样例",
+            "sourceText": "人物发现屋外来客，走到门边查看来客的身影。人物确认同伴安全，伸手阻止同伴继续向门外走去。人物发现屋外来客，走到门边查看来客的身影。人物确认同伴安全，伸手阻止同伴继续向门外走去。人物发现屋外来客，走到门边查看来客的身影。人物确认同伴安全，伸手阻止同伴继续向门外走去。人物发现屋外来客，走到门边查看来客的身影。人物确认同伴安全，伸手阻止同伴继续向门外走去。",
+            "highlightReport": "发现来客，查看身影，确认同伴安全后阻止开门，保留因果与反应。",
+            "scriptBeats": [
+              {
+                "id": "952b184a-3a62-477e-a3b9-5283a2569418",
+                "event": "人物发现屋外来客，走到门边查看来客的身影。",
+                "reaction": "人物确认同伴安全，伸手阻止同伴继续向门外走去。",
+                "dialogue": [
+                  "人物：先不要开门。"
+                ],
+                "os": [
+                  "人物：先看看。"
+                ],
+                "floatLabels": [
+                  "场景：房间"
+                ],
+                "systemPanels": [
+                  "提示：门外有人。"
+                ],
+                "sourceQuote": "人物发现屋外来客，走到门边查看来客的身影。人物确认同伴安全，伸手阻止同伴继续向门外走去。人物发现屋外来客，走到门边查看来客的身影。人物确认同伴安全，伸手阻止同伴继续向门外走去。人物发现屋外来客，走到门边查看来客的身影。人物确认同伴安全，伸手阻止同伴继续向门外走去。人物发现屋外来客，走到门边查看来客的身影。人物确认同伴安全，伸手阻止同伴继续向门外走去。"
+              }
+            ],
+            "visualStyle": {
+              "name": "",
+              "description": ""
+            },
+            "scriptVersion": 1,
+            "scriptHistory": [],
+            "segments": [
+              {
+                "id": "35d909a2-97ab-4ec4-895e-99257d5d0478",
+                "number": 1,
+                "beatId": "952b184a-3a62-477e-a3b9-5283a2569418",
+                "durationSec": 30,
+                "visualPlan": "房间门边近景到中景，末帧保持伸手阻止的动作。",
+                "anchorPlan": {
+                  "fromX": 25,
+                  "toX": 75,
+                  "level": "medium"
+                },
+                "effectIds": [],
+                "effectVersions": {},
+                "effectEvidence": {},
+                "artifacts": [
+                  {
+                    "id": "01290791-de79-4d5a-81fa-50f7aa34e1b8",
+                    "kind": "prompt",
+                    "createdAt": "2026-10-01T00:00:00Z",
+                    "sourceHash": "e72e93344e303a282075f9933aa412df545aeb5c2e2992abc847ec41f62b6a33",
+                    "content": "【最高约束】严格按本段子镜时间顺序生成；禁止新增人物、场景、动作或对白，禁止跳镜、提前演出下一段和重复拉长同一动作。锁定剧本中的因果、反应与声音须完整保留。\n【可发声文本边界】本段仅有1句正式人物对白、1句正式内心OS。只按逐镜声源和时序说出【对白】与【内心OS】引用的原句，各句只说一次；禁止自动新增解说、旁白、补词或复述。事件、人物反应、动作描述、故事梗概、参考图说明、身份浮签、系统文字和声源指令均不是待朗读台词，不得说出来。原文已有OS保留对应角色自己的内心声，不能改成独立解说员。人物对白必须清晰有声，不得以静音或字幕替代。\n【屏幕文字边界】叠加文字仅允许正式剧本指定的身份浮签和系统提示；原文没有的系统提示不得新增。禁止自动添加对白字幕、OS字幕、解说字幕、说明文字、镜头编号或渲染提示词。身份浮签默认只绑定对应可见角色；原文明确指定被提及时显示的身份浮签，仅作为提及HUD，不引入该角色出场，不得贴在其他人物脸上。POV主角的身份浮签只能作为主观HUD，不得贴在对手脸上。账页、请帖等物理道具上的原剧情字样属于道具内容，按原剧情保留，不属于叠加字幕；参考图自带的其他文字不得变成剧情事实。\n【正式视频提示词｜片段 1｜30 秒】\n【逐镜参考范围】全部附件是资产库，不代表每镜全部出场。每镜只使用该镜参考资产，未列出的角色和道具不得被图片诱导提前入场；衣饰和道具图片背景不是实际场景。\n【参考图使用】人物使用完整四视图＋大头照，整张共同锁定同一人物的五官、眼神、发型、体态、衣饰与材质；各视角属于同一角色。场景图锁定空间。参考图中的拼图格线、棚拍背景和并列多视角不得出现在连续成片画面中。\n【附件图1】人物｜完整四视图＋大头照；完整四视图中的正面、侧面、背面和大头照都是同一角色，用整图锁定五官、发型、体态与当前服装的一致性；按本镜正式分镜选择机位和动作，不能把多个视角演成多个人或把拼图版式、背景搬进场景。\n【附件图2】房间｜主图；只定义本镜场景空间，不定义人物身份或摄影机主人；其他人物参考图中的背景不能覆盖此场景。\n【剧情与动作】人物发现屋外来客，走到门边查看来客的身影。\n【人物反应】人物确认同伴安全，伸手阻止同伴继续向门外走去。\n【画面与机位】房间门边近景到中景，末帧保持伸手阻止的动作。\n【镜头节奏】本段按下列子镜时间码切换独立景别，不拍成单个持续推拉运镜；对白和内心OS从所标子镜开始，可自然跨后续子镜说完，切镜不得截断声音或压缩台词。\n【声音生成合同】完整原生音轨必须生成并保留。逐镜【对白】由对应角色真实说出口，口型同步；逐镜【内心OS】也必须由对应角色本人声线逐字发声，嘴型不动，带轻微内心混响。环境音与音效在发声时压低，不得用环境声代替台词、用画面字幕代替声音，或因角色当前不是人形而省略其心声。禁止第三方解说、旁白及额外配音。\n【声音字段口径】标为“无”的镜头不新增发声；有台词的镜头只能从该子镜起点开始，不能提前，允许跨后续镜头自然说完。对白与内心OS是两种声音字段，均须实际进入成片音轨；同一句只说一次，不得重复。\n### 子镜1｜0–2秒｜首帧主体近景\n【场景与前置】房间；前置状态1\n【正式画面动作】人物发现屋外来客，走到门边查看来客的身影。第1个执行节拍\n【可见结果】可见结果1\n【参考资产】人物、房间\n【对白】人物：先不要开门。\n【内心OS】无（此窗口没有新台词或跨镜续说）\n【旁白】无\n【浮签】无\n【系统信息】无\n【停止边界/物理末帧】末帧状态1。不提前演下一镜。\n### 子镜2｜2–6.667秒｜主体与场景中景\n【场景与前置】房间；前置状态2\n【正式画面动作】人物发现屋外来客，走到门边查看来客的身影。第2个执行节拍\n【可见结果】可见结果2\n【参考资产】人物、房间\n【对白】无新台词；承接前镜已开始的对白，最迟6.667秒前结束，不重说；继续声音的角色：人物\n【内心OS】无（此窗口没有新台词或跨镜续说）\n【旁白】无\n【浮签】场景：房间\n【系统信息】无\n【停止边界/物理末帧】末帧状态2。不提前演下一镜。\n### 子镜3｜6.667–11.333秒｜动作近景\n【场景与前置】房间；前置状态3\n【正式画面动作】人物发现屋外来客，走到门边查看来客的身影。第3个执行节拍\n【可见结果】可见结果3\n【参考资产】人物、房间\n【对白】无（此窗口没有新台词或跨镜续说）\n【内心OS】人物：先看看。\n【旁白】无\n【浮签】无\n【系统信息】无\n【停止边界/物理末帧】末帧状态3。不提前演下一镜。\n### 子镜4｜11.333–16秒｜空间关系镜\n【场景与前置】房间；前置状态4\n【正式画面动作】人物发现屋外来客，走到门边查看来客的身影。第4个执行节拍\n【可见结果】可见结果4\n【参考资产】人物、房间\n【对白】无（此窗口没有新台词或跨镜续说）\n【内心OS】无（此窗口没有新台词或跨镜续说）\n【旁白】无\n【浮签】无\n【系统信息】提示：门外有人。\n【停止边界/物理末帧】末帧状态4。不提前演下一镜。\n### 子镜5｜16–20.667秒｜动作结果镜\n【场景与前置】房间；前置状态5\n【正式画面动作】人物发现屋外来客，走到门边查看来客的身影。第5个执行节拍\n【可见结果】可见结果5\n【参考资产】人物、房间\n【对白】无（此窗口没有新台词或跨镜续说）\n【内心OS】无（此窗口没有新台词或跨镜续说）\n【旁白】无\n【浮签】无\n【系统信息】无\n【停止边界/物理末帧】末帧状态5。不提前演下一镜。\n### 子镜6｜20.667–25.333秒｜人物反应近景\n【场景与前置】房间；前置状态6\n【正式画面动作】人物确认同伴安全，伸手阻止同伴继续向门外走去。第6个执行节拍\n【可见结果】可见结果6\n【参考资产】人物、房间\n【对白】无（此窗口没有新台词或跨镜续说）\n【内心OS】无（此窗口没有新台词或跨镜续说）\n【旁白】无\n【浮签】无\n【系统信息】无\n【停止边界/物理末帧】末帧状态6。不提前演下一镜。\n### 子镜7｜25.333–30秒｜末帧交接镜\n【场景与前置】房间；前置状态7\n【正式画面动作】人物确认同伴安全，伸手阻止同伴继续向门外走去。第7个执行节拍\n【可见结果】可见结果7\n【参考资产】人物、房间\n【对白】无（此窗口没有新台词或跨镜续说）\n【内心OS】无（此窗口没有新台词或跨镜续说）\n【旁白】无\n【浮签】无\n【系统信息】无\n【停止边界/物理末帧】末帧状态7。不提前演下一镜。\n【角色锚点】人物；合成测试人物，健康清醒，；声线：合成测试清晰自然声线\n【场景锚点】房间；窗户完整，门边空间清晰的室内。\n【可见信息层】只显示下列正式内容；对白和内心OS不生成画面字幕、台词转写或OS字卡。\n人物浮签（模型直出）：无（本段无正式人物浮签）\n场景浮签（模型直出）：场景：房间\n时间浮签（模型直出）：无（本段无正式时间浮签）\n设定/系统浮签：\n系统面板（模型直出或空面板后期精确覆盖）：提示：门外有人。\n【禁止】不得删减事件、对白、OS、人物反应或可见信息；不得添加新剧情。"
+                  },
+                  {
+                    "id": "7f07886f-166c-41d5-857f-33c1225af55a",
+                    "kind": "video",
+                    "createdAt": "2026-10-01T00:00:00Z",
+                    "sourceHash": "e72e93344e303a282075f9933aa412df545aeb5c2e2992abc847ec41f62b6a33",
+                    "generationHash": "b2da7636c04e7ea034b7f1df0b776cc24c65d67a90df21e84c399ff2c8db6dc2",
+                    "referenceHashes": [
+                      {
+                        "imageId": "person-image",
+                        "hash": "620564251113d3d86bf88c83fe93275aa3072e740652b941b99a869461b528ac"
+                      },
+                      {
+                        "imageId": "room-image",
+                        "hash": "620564251113d3d86bf88c83fe93275aa3072e740652b941b99a869461b528ac"
+                      }
+                    ],
+                    "mediaPath": "compatibility/whole-video.mp4",
+                    "review": {
+                      "status": "approved",
+                      "notes": "合成测试：仅供离线回归",
+                      "reviewedAt": "2026-10-01T00:00:00Z"
+                    }
+                  }
+                ],
+                "selected": {
+                  "prompt": "01290791-de79-4d5a-81fa-50f7aa34e1b8",
+                  "video": "7f07886f-166c-41d5-857f-33c1225af55a"
+                },
+                "subshots": [
+                  {
+                    "id": "aec2052e-984d-470e-ba01-ab25dce3d9fe",
+                    "startSec": 0,
+                    "endSec": 2,
+                    "framing": "首帧主体近景",
+                    "action": "人物发现屋外来客，走到门边查看来客的身影。第1个执行节拍",
+                    "lineRefs": {
+                      "dialogue": [
+                        0
+                      ],
+                      "os": [],
+                      "floatLabels": [],
+                      "systemPanels": []
+                    },
+                    "evidence": "人物发现屋外来客，走到门边查看来客的身影。",
+                    "location": "房间",
+                    "priorState": "前置状态1",
+                    "result": "可见结果1",
+                    "endFrame": "末帧状态1",
+                    "assetIds": [
+                      "person",
+                      "room"
+                    ]
+                  },
+                  {
+                    "id": "6411ffe4-0f27-460a-a0e9-8909a979b2dd",
+                    "startSec": 2,
+                    "endSec": 6.667,
+                    "framing": "主体与场景中景",
+                    "action": "人物发现屋外来客，走到门边查看来客的身影。第2个执行节拍",
+                    "lineRefs": {
+                      "dialogue": [],
+                      "os": [],
+                      "floatLabels": [
+                        0
+                      ],
+                      "systemPanels": []
+                    },
+                    "evidence": "人物发现屋外来客，走到门边查看来客的身影。",
+                    "location": "房间",
+                    "priorState": "前置状态2",
+                    "result": "可见结果2",
+                    "endFrame": "末帧状态2",
+                    "assetIds": [
+                      "person",
+                      "room"
+                    ]
+                  },
+                  {
+                    "id": "300463c1-ddd7-4bd4-ae52-45feec46953a",
+                    "startSec": 6.667,
+                    "endSec": 11.333,
+                    "framing": "动作近景",
+                    "action": "人物发现屋外来客，走到门边查看来客的身影。第3个执行节拍",
+                    "lineRefs": {
+                      "dialogue": [],
+                      "os": [
+                        0
+                      ],
+                      "floatLabels": [],
+                      "systemPanels": []
+                    },
+                    "evidence": "人物发现屋外来客，走到门边查看来客的身影。",
+                    "location": "房间",
+                    "priorState": "前置状态3",
+                    "result": "可见结果3",
+                    "endFrame": "末帧状态3",
+                    "assetIds": [
+                      "person",
+                      "room"
+                    ]
+                  },
+                  {
+                    "id": "695862cf-844a-4a96-bad2-90efb3b8cf76",
+                    "startSec": 11.333,
+                    "endSec": 16,
+                    "framing": "空间关系镜",
+                    "action": "人物发现屋外来客，走到门边查看来客的身影。第4个执行节拍",
+                    "lineRefs": {
+                      "dialogue": [],
+                      "os": [],
+                      "floatLabels": [],
+                      "systemPanels": [
+                        0
+                      ]
+                    },
+                    "evidence": "人物发现屋外来客，走到门边查看来客的身影。",
+                    "location": "房间",
+                    "priorState": "前置状态4",
+                    "result": "可见结果4",
+                    "endFrame": "末帧状态4",
+                    "assetIds": [
+                      "person",
+                      "room"
+                    ]
+                  },
+                  {
+                    "id": "122eb958-ab89-4889-b754-0686fb22e0f1",
+                    "startSec": 16,
+                    "endSec": 20.667,
+                    "framing": "动作结果镜",
+                    "action": "人物发现屋外来客，走到门边查看来客的身影。第5个执行节拍",
+                    "lineRefs": {
+                      "dialogue": [],
+                      "os": [],
+                      "floatLabels": [],
+                      "systemPanels": []
+                    },
+                    "evidence": "人物发现屋外来客，走到门边查看来客的身影。",
+                    "location": "房间",
+                    "priorState": "前置状态5",
+                    "result": "可见结果5",
+                    "endFrame": "末帧状态5",
+                    "assetIds": [
+                      "person",
+                      "room"
+                    ]
+                  },
+                  {
+                    "id": "e994cdb1-4938-4ba8-b699-ab4761629810",
+                    "startSec": 20.667,
+                    "endSec": 25.333,
+                    "framing": "人物反应近景",
+                    "action": "人物确认同伴安全，伸手阻止同伴继续向门外走去。第6个执行节拍",
+                    "lineRefs": {
+                      "dialogue": [],
+                      "os": [],
+                      "floatLabels": [],
+                      "systemPanels": []
+                    },
+                    "evidence": "人物确认同伴安全，伸手阻止同伴继续向门外走去。",
+                    "location": "房间",
+                    "priorState": "前置状态6",
+                    "result": "可见结果6",
+                    "endFrame": "末帧状态6",
+                    "assetIds": [
+                      "person",
+                      "room"
+                    ]
+                  },
+                  {
+                    "id": "106987e8-17c3-43ef-8401-10142843c825",
+                    "startSec": 25.333,
+                    "endSec": 30,
+                    "framing": "末帧交接镜",
+                    "action": "人物确认同伴安全，伸手阻止同伴继续向门外走去。第7个执行节拍",
+                    "lineRefs": {
+                      "dialogue": [],
+                      "os": [],
+                      "floatLabels": [],
+                      "systemPanels": []
+                    },
+                    "evidence": "人物确认同伴安全，伸手阻止同伴继续向门外走去。",
+                    "location": "房间",
+                    "priorState": "前置状态7",
+                    "result": "可见结果7",
+                    "endFrame": "末帧状态7",
+                    "assetIds": [
+                      "person",
+                      "room"
+                    ]
+                  }
+                ],
+                "subshotsAuto": true,
+                "subshotsReviewed": true,
+                "shotContractVersion": 2,
+                "assetBindings": [
+                  {
+                    "assetId": "person",
+                    "imageId": "person-image"
+                  },
+                  {
+                    "assetId": "room",
+                    "imageId": "room-image"
+                  }
+                ]
+              }
+            ],
+            "sourceReviewedHash": "b4d1306dd5b9e7351179fa0b38867326c8393538fa503410745f50bc211f4208",
+            "highlightReviewedHash": "f7e35f73b77c52d87e72eb8c3946264c5d28bc8d27105d4bb8554f938918733d",
+            "scriptLockedHash": "1f87aba7792d32c65e62a44cdbfc8467c5f330d96b4b1a9899c75c409600b6b0",
+            "auditApprovedHash": "4b575f2807731c9ebba94f3c6fb8c023297e56116605e795751ca653a32f4a52"
+          }
+        ]
+      },
+      "oldGenerationHash": "b2da7636c04e7ea034b7f1df0b776cc24c65d67a90df21e84c399ff2c8db6dc2",
+      "currentAuditIssues": [],
+      "encoding021GenerationHash": "1cd55596074c79a1675c2290a6c07abb83f3776856a35fa8441353097cb2661d"
+    }
+  ]
+}

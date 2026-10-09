@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "models": {
+    "text": "claude-opus-5-5",
+    "image": "gpt-image-2.5-sunburst",
+    "video": "专享sd2.5(30图10音/4-30秒/720p)"
+  },
+  "evidence": {
+    "realModelCalls": true,
+    "mp4Composition": true
+  },
+  "files": [
+    {
+      "file": "assets/d5b772e1-5743-4655-89b3-79efc9a2685f.png",
+      "sha256": "7a8fa249641e9f455264e3cdef14ac36bbce9b4ffbe93f6c5699f2acc40d6f45"
+    },
+    {
+      "file": "assets/22e840cd-747f-4f64-9ca4-5d83727d6cca.png",
+      "sha256": "78f12724738fe7b60a1020b982ab94a7165bb1ac65ef4e74cb432383018b41b3"
+    },
+    {
+      "file": "assets/2ba4acfc-824a-4289-bd70-656d2fad65fb.png",
+      "sha256": "f38931c4203cf58feb1bc1d3594967c0c0a2e85d73a40ee168e1fb98da04416f"
+    },
+    {
+      "file": "video/8fa25900-df16-4994-a240-de5a7a22ec25.mp4",
+      "sha256": "4b39d9ba5c2865a461bf6eb067adf67500ef3e3c1d23d4f03ed9318ea96bffaf"
+    },
+    {
+      "file": "preview/wanling-demo-public.mp4",
+      "sha256": "19d1f870eab82ca7089052311b68f0998d53787e1fa218b6a50f1e6c77e3300f"
+    }
+  ]
+}

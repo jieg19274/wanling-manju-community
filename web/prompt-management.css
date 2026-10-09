@@ -1,0 +1,14 @@
+.prompt-management-backdrop{position:fixed;inset:0;z-index:140;background:#0009;display:grid;place-items:center;padding:24px}
+.prompt-management-dialog{width:min(1120px,100%);max-height:calc(100dvh - 48px);overflow:auto;padding:24px;border:1px solid var(--ui-border);border-radius:16px;background:var(--ui-surface);color:var(--ui-text);box-shadow:0 18px 70px #0009}
+.prompt-management-dialog header{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.prompt-management-dialog h2,.prompt-management-dialog h3{margin-top:0}
+.prompt-management-dialog p{line-height:1.65}
+.prompt-management-dialog>section{margin-top:24px;padding-top:20px;border-top:1px solid var(--ui-border)}
+.prompt-management-dialog textarea{width:100%;min-height:240px;line-height:1.65;resize:vertical;white-space:pre-wrap}
+.prompt-management-dialog label{display:flex;align-items:center;gap:8px;margin:10px 0}
+.prompt-management-dialog label:has(textarea){display:block}
+.prompt-management-dialog input[type=checkbox]{width:18px;height:18px;flex:none}
+.prompt-management-list{margin:16px 0}.prompt-management-row{padding:14px 0;border-bottom:1px solid var(--ui-border)}
+.prompt-management-row small{display:block;line-height:1.5;margin:6px 0}.prompt-management-row pre{max-height:340px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.6}
+.prompt-management-history{padding:12px;border:1px solid var(--ui-border);border-radius:8px}
+@media(max-width:700px){.prompt-management-backdrop{padding:8px}.prompt-management-dialog{padding:16px;max-height:calc(100dvh - 16px)}}

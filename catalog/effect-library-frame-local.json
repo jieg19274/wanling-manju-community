@@ -1,0 +1,65 @@
+{
+  "version": "1.1.0",
+  "effects": [
+    {
+      "id": "combat-frame-hard-contact-flash",
+      "name": "强碰撞瞬白·非生物目标",
+      "category": "画面级战斗",
+      "type": "prompt",
+      "status": "draft_untested",
+      "authorship": "木木工坊本地画面级战斗适配",
+      "engine": "由用户选择的视频生成模型",
+      "parameters": {},
+      "prompt": "仅在正式分镜已发生兵刃、护盾、巨齿或其他非生物目标的强碰撞时调用。接触同拍整幅画面极短闪白，立即恢复原场景光色并显露原定碰撞结果；不得增加破裂、击退或第二次攻击。",
+      "notes": "用于已明确发生的非生物目标强碰撞；人物或怪物受击优先使用黑色爆墨命中，不叠加两次全画幅白闪。",
+      "requirements": ["正式分镜已有强碰撞动作、目标与结果"],
+      "validation": "软件链路待验证，实际成片待代表镜头验证",
+      "usage": "战斗",
+      "target_field": "visual_effect",
+      "level": "advanced",
+      "genre": "通用"
+    },
+    {
+      "id": "combat-frame-ground-shock",
+      "name": "巨物重击·画面冲击脉冲",
+      "category": "画面级战斗",
+      "type": "prompt",
+      "status": "draft_untested",
+      "authorship": "木木工坊本地画面级战斗适配",
+      "engine": "由用户选择的视频生成模型",
+      "parameters": {},
+      "prompt": "仅在正式分镜已有巨物落地或重击造成地形冲击时调用。接触同拍整幅画面对比度短促压缩再恢复，已有近远景尘石随冲击响应，随后立即显露原定地形结果；不增加坑洞、塌陷或攻击次数。",
+      "notes": "用于已经写出地面破坏和余波的大场景重击；不把普通脚步、升级光波或蓄势镜头改成地震。",
+      "requirements": ["正式分镜已有巨物重击及可见地形反馈"],
+      "validation": "软件链路待验证，实际成片待代表镜头验证",
+      "usage": "战斗",
+      "target_field": "visual_effect",
+      "level": "advanced",
+      "genre": "通用"
+    },
+    {
+      "id": "combat-scenario-hit-flurry", "name": "连击压制·节拍式画面反差", "category": "近战战斗", "type": "prompt", "status": "draft_untested", "authorship": "木木工坊本地战斗适配", "engine": "由用户选择的视频生成模型", "parameters": {}, "prompt": "正式连续命中的每次落点以短促局部受光串成节奏，非接触间隙整幅画面略压暗，最后一次原定重击让近中远景反差同拍跃起，随即恢复原光色。动作正常速度连续完成，不把每拳都做白闪；次数、伤势与胜负服从分镜。", "notes": "从废弃初稿的训练厅连拳提炼动作类型，画面语言重新设计；不把蓄势或挥空变成命中。", "requirements": ["正式分镜已写明连续命中及受击反馈"], "validation": "软件链路待验证，实际成片待代表镜头验证", "usage": "战斗", "target_field": "visual_effect", "level": "advanced", "genre": "通用"
+    },
+    {
+      "id": "combat-scenario-guard-absorbs", "name": "硬抗卸力·画面向接触点坍缩", "category": "近战战斗", "type": "prompt", "status": "draft_untested", "authorship": "木木工坊本地战斗适配", "engine": "由用户选择的视频生成模型", "parameters": {}, "prompt": "真实受击一拍，画面四周的亮度与空气折射朝接触点短促收紧，受击者轮廓仍清晰居中；既有护体纹理若在分镜中存在才响应，反差立即弹回原场景。硬抗后的位移、伤势和表情按原结果，不添加反弹或无敌设定。", "notes": "从废弃初稿的狼王扑击与训练厅抗拳提炼硬抗关系；没有正式护体纹理时不生成新甲胄。", "requirements": ["实际受击且结果明确未被击倒或仅按原文位移"], "validation": "软件链路待验证，实际成片待代表镜头验证", "usage": "战斗", "target_field": "visual_effect", "level": "advanced", "genre": "通用"
+    },
+    {
+      "id": "combat-scenario-beast-sweep-terrain", "name": "巨兽横扫·战场斜切", "category": "巨兽战斗", "type": "prompt", "status": "draft_untested", "authorship": "木木工坊本地战斗适配", "engine": "由用户选择的视频生成模型", "parameters": {}, "prompt": "巨兽原定横扫轨迹把前景、人物与远景斜向分开；肢体擦身掠过时不造成人物受击，真正撞上地面或墙体的一拍，亮暗沿轨迹横切全画面，近景碎屑、中景尘线、远景受光依次响应，立即露出原定破坏范围。", "notes": "从废弃初稿的尾鳍和扑空撞墙提炼空间关系，重新设计画面级斜切表现。", "requirements": ["巨兽横扫或扑空撞击环境，且正式结果已有环境反馈"], "validation": "软件链路待验证，实际成片待代表镜头验证", "usage": "战斗", "target_field": "visual_effect", "level": "advanced", "genre": "通用"
+    },
+    {
+      "id": "combat-scenario-first-breach", "name": "首次破防·战局反转色阶", "category": "巨兽战斗", "type": "prompt", "status": "draft_untested", "authorship": "木木工坊本地战斗适配", "engine": "由用户选择的视频生成模型", "parameters": {}, "prompt": "第一次实际破防的同一拍，整幅画面的背景色阶短促压低，原攻击路径与第一道伤痕保持清晰亮缘；暗部立即退回原场景光色，让对手首次受伤的原定反应成为视觉重心。若已叠爆墨白闪，只保留同一拍一次冲击，不额外再闪。", "notes": "从废弃初稿的关节首次伤痕提炼反转节点，不沿用旧稿慢镜。", "requirements": ["正式动作已命中，结果明确首次破防或出现第一道伤痕"], "validation": "软件链路待验证，实际成片待代表镜头验证", "usage": "战斗", "target_field": "visual_effect", "level": "advanced", "genre": "通用"
+    },
+    {
+      "id": "combat-scenario-weakpoint-strike", "name": "弱点定点·纵深聚焦突刺", "category": "巨兽战斗", "type": "prompt", "status": "draft_untested", "authorship": "木木工坊本地战斗适配", "engine": "由用户选择的视频生成模型", "parameters": {}, "prompt": "已识别且实际击中的弱点成为画面唯一高对比焦点：人物从原站位沿既定路径压入纵深，前景干扰掠开、兵器亮缘直达原弱点；命中同拍恢复完整战场和原定伤势，不画游戏准星，不增加贯穿或处决。", "notes": "从废弃初稿的腹部旧伤与关节打击提炼空间聚焦；弱点未被实际击中时不应用。", "requirements": ["同镜明确弱点位置、实际命中与结果"], "validation": "软件链路待验证，实际成片待代表镜头验证", "usage": "战斗", "target_field": "visual_effect", "level": "advanced", "genre": "通用"
+    },
+    {
+      "id": "combat-scenario-knockback-collision", "name": "击退撞物·双冲击空间回弹", "category": "近战战斗", "type": "prompt", "status": "draft_untested", "authorship": "木木工坊本地战斗适配", "engine": "由用户选择的视频生成模型", "parameters": {}, "prompt": "真实受击与撞上既有物件形成两个清楚但不断开的冲击节拍：人物沿原飞退路线迅速穿过前中景，碰撞点才触发短促全画幅明暗回弹，原定物件形变或倒塌后画面立即稳定。距离、次数、落地姿态和损坏只取分镜。", "notes": "从废弃初稿的撞铁架倒塌提炼双接触结构；若只被击退、未撞物则不使用。", "requirements": ["正式动作有击退、场景物碰撞及可见结果"], "validation": "软件链路待验证，实际成片待代表镜头验证", "usage": "战斗", "target_field": "visual_effect", "level": "advanced", "genre": "通用"
+    },
+    {
+      "id": "combat-scenario-gate-breach", "name": "巨物破门·逆光尺度显形", "category": "巨兽战斗", "type": "prompt", "status": "draft_untested", "authorship": "木木工坊本地战斗适配", "engine": "由用户选择的视频生成模型", "parameters": {}, "prompt": "巨物按原动作撞破既有门墙，同拍整幅画面的亮度被破口逆光短促抬起；近景碎片、中景尘幕、远景巨物剪影形成三层尺度，尘幕后迅速露出原定身形、人物反应与破口。逆光只是画面表现，不扩大损坏或新增敌人。", "notes": "从废弃初稿的合金闸门被撞开提炼尺度关系，重新设计入场奇观；只撞未破时不可套用。", "requirements": ["正式动作明确破门或破墙以及入场结果"], "validation": "软件链路待验证，实际成片待代表镜头验证", "usage": "战斗", "target_field": "visual_effect", "level": "advanced", "genre": "通用"
+    },
+    {
+      "id": "combat-scenario-blade-armor-scrape", "name": "刀锋擦甲·冷暖断层火花", "category": "巨兽战斗", "type": "prompt", "status": "draft_untested", "authorship": "木木工坊本地战斗适配", "engine": "由用户选择的视频生成模型", "parameters": {}, "prompt": "原刀路划过硬甲的一拍，刀面冷色锐边与甲面暖色摩擦火花形成强反差，亮线贴着既定接触弧度疾速扫过并立刻熄灭；后景短促压暗以显出甲片厚度，随即恢复原光色。只呈现原定擦痕与对手反应，不凭火花写成破甲。", "notes": "从废弃初稿的刀刃擦过背甲提炼材质对抗，重新设计冷暖反差。", "requirements": ["刀刃与硬甲实际接触，结果明确未破防或仅留擦痕"], "validation": "软件链路待验证，实际成片待代表镜头验证", "usage": "战斗", "target_field": "visual_effect", "level": "advanced", "genre": "通用"
+    }
+  ]
+}

@@ -1,0 +1,771 @@
+{
+  "source": "ManjuFlow-Studio-V2 effectLibraryService catalog()",
+  "version": "manju-effects-1.9.0",
+  "effects": [
+    {
+      "id": "energy-arc",
+      "visual_details": "细分支电弧紧贴原定缠绕路径疾速跳动，亮白电芯与外缘冷色电晕清楚分层；每次原定发力或接触同拍爆亮，人物与邻近已指定表面同步受光，电弧随动作离开而迅速收束",
+      "visual_scope": "local",
+      "aliases": [
+        "电光",
+        "电弧",
+        "雷电",
+        "雷光",
+        "闪电",
+        "雷霆.*缠绕"
+      ]
+    },
+    {
+      "id": "energy-wave",
+      "visual_details": "原定冲击发生的同一拍，波前从既定落点骤然向外推开，亮芯与薄层透明波缘形成强明暗反差；已有尘土与衣料按冲击方向同步响应，近景波前掠过后立即露出原定场景结果",
+      "visual_scope": "scene",
+      "aliases": [
+        "冲击波",
+        "冲击环",
+        "气浪",
+        "震荡波",
+        "爆风",
+        "空气波纹",
+        "冲击.*扩散"
+      ]
+    },
+    {
+      "id": "fire-orb",
+      "visual_details": "原定火球具有炽亮内芯、翻卷火舌与清晰外缘，火光同步扫过持火者和邻近已指定表面；随原动作移动时保留连续光轨，若原动作已命中，则在原接触点短促爆亮后立即露出原定受击结果",
+      "visual_scope": "local",
+      "aliases": [
+        "火球",
+        "炎爆",
+        "火焰弹",
+        "烈焰.*球"
+      ]
+    },
+    {
+      "id": "fire-trail",
+      "visual_details": "火焰亮芯紧贴原定高速运动主体，尾焰沿已写出的轨迹向后拉出锐利光线；前端炽亮、远端迅速碎散，经过的既定表面同步掠过火光，不让尾焰悬在画面中拖慢主体",
+      "visual_scope": "local",
+      "aliases": [
+        "火焰.*拖尾",
+        "火舌.*尾迹",
+        "焰尾",
+        "火焰.*轨迹"
+      ]
+    },
+    {
+      "id": "smoke-reveal",
+      "visual_details": "烟雾随原定显形动作从主体轮廓前方翻卷让开，近景烟丝掠过镜头、远景雾层仍保留空间深度；透光边缘在原定显形时点勾出人物或物体，不另增雾中目标",
+      "visual_scope": "scene",
+      "aliases": [
+        "烟雾.*(?:显形|凝形|汇聚)",
+        "白雾.*(?:漫延|翻涌|合拢)",
+        "云雾.*(?:奔涌|合拢)",
+        "雾气.*翻滚"
+      ]
+    },
+    {
+      "id": "dust-burst",
+      "visual_details": "原定落地接触的同一拍，尘土由接触面受压后向外翻卷，近处粗颗粒掠过镜头前景，远处薄尘拉出战场纵深；尘幕迅速让出主体与原定落地结果，不扩大原有破坏范围",
+      "visual_scope": "scene",
+      "aliases": [
+        "扬尘",
+        "尘土飞扬",
+        "碎石.*溅",
+        "尘屑.*横飞",
+        "泥尘.*腾起",
+        "石屑横飞"
+      ]
+    },
+    {
+      "id": "gold-dissolve",
+      "visual_details": "金色微粒的亮度与大小有层次，粒子只从分镜指定的消散区域脱离；主体是否消失严格服从原结果",
+      "visual_scope": "local",
+      "aliases": [
+        "金光.*(?:消散|溃散)",
+        "金色.*粒子.*散"
+      ]
+    },
+    {
+      "id": "particle-form",
+      "visual_details": "细粒沿已指定的汇聚路径靠拢，聚合边缘保留颗粒到实体的材质过渡，不增加新的聚合对象",
+      "visual_scope": "local",
+      "aliases": [
+        "粒子.*(?:聚合|汇聚)",
+        "灵息.*汇聚",
+        "光点.*凝聚"
+      ]
+    },
+    {
+      "id": "ice-grow",
+      "visual_details": "冰晶枝杈具有透明折射与细密霜纹，生长边界沿分镜指定表面推进，保持原有接触位置",
+      "visual_scope": "local",
+      "aliases": [
+        "冰晶.*(?:生长|蔓延)",
+        "霜纹.*扩展",
+        "结霜.*蔓延"
+      ]
+    },
+    {
+      "id": "rain-impact",
+      "visual_details": "雨滴撞击已指定表面时形成细小飞溅与水膜反光，涟漪位置和接触时点对应",
+      "visual_scope": "local",
+      "aliases": [
+        "雨丝",
+        "雨幕",
+        "落雨",
+        "雨水.*(?:溅|打湿|砸)",
+        "暴雨",
+        "泥水飞溅",
+        "泥浆四溅",
+        "洼地.*水花"
+      ]
+    },
+    {
+      "id": "hologram",
+      "visual_details": "投影轮廓呈半透明光层与细微扫描纹理，只展示正式信息层已规定的内容和对象",
+      "visual_scope": "local",
+      "aliases": [
+        "全息投影",
+        "投影.*虚影"
+      ]
+    },
+    {
+      "id": "portal",
+      "visual_details": "门缘能量沿既定轮廓流动，门面透光层次与周围材质反光一致，目的地和穿越结果沿用分镜",
+      "visual_scope": "local",
+      "aliases": [
+        "传送门",
+        "空间门",
+        "光门"
+      ]
+    },
+    {
+      "id": "advanced-001",
+      "visual_details": "原定剑影阵列在前景、中景与远景拉开尺度，剑身锋亮、阵心压暗，剑影按既定方向疾速掠出；光尾与剑身同步而不滞留，原有受光场景形成一瞬明暗扫动，剑数、目标与命中结果只取正式动作",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "advanced-002",
+      "visual_details": "原定挥剑以正常速度一气完成，弧形剑光沿既定剑路骤然甩出，锋利亮缘与半透明内层形成强反差；若原动作已命中，接触点短促爆亮后立即露出原定受击反应，光迹不另加挥剑或命中",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "advanced-003",
+      "visual_details": "剑光在既定飞行路径上形成连续光尾，云层接触处的透光与扰动随剑的位置变化",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "advanced-004",
+      "visual_details": "剑阵的既定阵位保持稳定，能量连线只连接原有阵位，前后层次与地面投光一致",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "advanced-005",
+      "visual_details": "剑光与瀑布接触处呈高亮折射和细水雾，水流变化的范围与结果严格沿用原分镜",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "advanced-006",
+      "visual_details": "雷龙轮廓由分支电弧构成，明暗脉冲沿原绕行方向传递，人物接触侧接受同步电光",
+      "visual_scope": "local",
+      "aliases": [
+        "雷龙",
+        "雷龙绕体"
+      ]
+    },
+    {
+      "id": "advanced-007",
+      "visual_details": "火莲花瓣具有火焰薄片与炽亮边缘，层叠光影沿既定绽放动作变化",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "advanced-008",
+      "visual_details": "冰枪保留透明冰质、内部裂纹和霜屑，显现次序与位置严格对应原有攻击动作",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "advanced-009",
+      "visual_details": "水盾表面流线沿既定旋转方向闭合，水膜折射保持人物轮廓可辨，受力涟漪从原接触点扩散",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "advanced-010",
+      "visual_details": "岩壁表面呈分层岩纹与碎屑反馈，裂缝与尘土集中于原有隆起和接触区域",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "advanced-011",
+      "visual_details": "原定拳势抵达既定终点或接触点的同一拍，空气骤然压成薄而锐利的折射环，亮缘沿原拳路向外推开；拳臂与邻近空气明暗瞬变，环面随冲击迅速散开，不额外制造命中或击退",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "advanced-012",
+      "visual_details": "真实人物沿原定路径瞬间掠过，前一位置只留短促半透明残影，残影按位移方向依次熄灭；衣料与已有尘气在经过处受牵动，起点、终点及人物数量保持原稿",
+      "visual_scope": "local",
+      "aliases": [
+        "瞬步",
+        "高速移动",
+        "残影.*位移",
+        "极速.*移动"
+      ]
+    },
+    {
+      "id": "advanced-013",
+      "visual_details": "原定锤击接触的同一拍，落点骤亮并将已有尘石沿受力方向向外抛开，近景碎粒与远景尘幕拉出冲击纵深；裂纹、坑洞和破坏范围只采用原分镜已有结果",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "advanced-014",
+      "visual_details": "原定双刃相撞的同一拍，接触点迸出尖锐白亮火星，金属高光沿既定刃面骤然扫过；火星顺原有夹角与受力方向短促飞散，立即露出双方原定手臂与兵器反应",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "advanced-015",
+      "visual_details": "原定急停时鞋底与既定接触面猛烈摩擦，细尘和擦痕沿原滑行方向前冲，衣料因惯性越过身体后迅速回落；停住的身体与仍在前冲的尘线形成明确速度反差，过程按原定时长连续完成",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "advanced-016",
+      "visual_details": "原定战甲部件边缘具有清晰拼接层次，材质高光随既定覆盖进程变化，不新增甲片或服装形制",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "advanced-017",
+      "visual_details": "瞳孔内的原定纹理呈细微发光层次，眼部反光保持稳定，不改变虹膜身份特征与原视线方向",
+      "visual_scope": "local",
+      "aliases": [
+        "瞳术",
+        "瞳孔.*(?:骤缩|异变)",
+        "眼底.*纹"
+      ]
+    },
+    {
+      "id": "advanced-018",
+      "visual_details": "灵翼既定轮廓内呈薄层透光与羽状能量纹理，光尾跟随原展翼方向",
+      "visual_scope": "local",
+      "aliases": [
+        "灵翼.*展开",
+        "翼.*能量.*展开"
+      ]
+    },
+    {
+      "id": "advanced-019",
+      "visual_details": "魔纹沿既定皮肤或衣料区域呈细线亮度变化，纹样只采用已指定图案",
+      "visual_scope": "local",
+      "aliases": [
+        "魔纹",
+        "纹路.*蔓延"
+      ]
+    },
+    {
+      "id": "advanced-020",
+      "visual_details": "原定法相以体积透光和强轮廓光压出巨大空间尺度，前景实体角色与后方虚影的遮挡关系清楚；法相边缘光照亮已指定环境后迅速稳定，形体、比例、姿态及出现结果保持原稿",
+      "visual_scope": "local",
+      "aliases": [
+        "法相",
+        "法相显现"
+      ]
+    },
+    {
+      "id": "advanced-021",
+      "visual_details": "裂隙边缘呈镜面折射与薄层高光，碎片只位于原定裂隙范围，不新增镜中世界或人物",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "advanced-022",
+      "visual_details": "原定攻击碰到结界的同一拍，接触点压出刺亮光核，明暗波纹沿既定盾面曲率向外急推；盾内外受光形成清楚反差，波纹退去后立即露出原定裂纹、破裂或完整状态",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "advanced-023",
+      "visual_details": "原定领域边界在既有场景中压出连续能量纹理与空气折射，近处边缘清锐、远处范围仍可辨认；环境明暗随既定展开动作迅速变化，场景结构、变化范围和人物反应保持正式分镜",
+      "visual_scope": "scene",
+      "aliases": []
+    },
+    {
+      "id": "advanced-024",
+      "visual_details": "已指定受重力影响的物体呈方向一致的尘粒与悬浮反馈，不额外移动场景中的其他物件",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "advanced-025",
+      "visual_details": "已指定停滞对象的边缘保留清晰层次，流动与停滞区域的视觉差异仅按原定对象和时间段表达",
+      "visual_scope": "scene",
+      "aliases": []
+    },
+    {
+      "id": "advanced-026",
+      "visual_details": "符阵线条具有连续光流和层叠投光，阵位、召唤对象与出现结果全部使用原分镜设定",
+      "visual_scope": "local",
+      "aliases": [
+        "符阵",
+        "法阵",
+        "阵纹.*亮起"
+      ]
+    },
+    {
+      "id": "advanced-027",
+      "visual_details": "灵体轮廓呈半透明重叠与柔和光边，离体路径和身体状态严格沿用既定动作",
+      "visual_scope": "local",
+      "aliases": [
+        "灵魂离体",
+        "灵体.*脱离"
+      ]
+    },
+    {
+      "id": "advanced-028",
+      "visual_details": "纸符与蝶翼间保留纸张纤维到薄翼透光的材质过渡，数量与变化结果沿用原分镜",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "advanced-029",
+      "visual_details": "守护兽虚影具有体积光和稀疏粒子轮廓，保持既定兽形、朝向和与人物的前后关系",
+      "visual_scope": "local",
+      "aliases": [
+        "守护兽.*虚影",
+        "法相.*虚影",
+        "战魂虚影",
+        "虚影凝现"
+      ]
+    },
+    {
+      "id": "advanced-030",
+      "visual_details": "既定影体具有层次透明度与边缘拖影，归位路径与对象严格服从原动作",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "advanced-031",
+      "visual_details": "原定劫雷落下的同一拍，雷芯刺亮、分支电弧骤然撕开云层，云底与既定落点同步闪亮；明暗变化立即回落，露出原有地面反馈与场景纵深，不扩大落雷范围",
+      "visual_scope": "scene",
+      "aliases": [
+        "天幕雷劫",
+        "劫雷",
+        "落雷"
+      ]
+    },
+    {
+      "id": "advanced-032",
+      "visual_details": "既定崩落区域内区分岩块、碎石与尘雾层次，碎落方向与原重力路径一致",
+      "visual_scope": "scene",
+      "aliases": [
+        "山体.*崩落",
+        "坍塌.*坠落",
+        "巨石.*滚落"
+      ]
+    },
+    {
+      "id": "advanced-033",
+      "visual_details": "分开的水壁呈折射、泡沫和细水流层次，水路位置及空间终点保持原分镜设定",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "advanced-034",
+      "visual_details": "血月已有轮廓呈层次明暗与环境色反射，保持原月体大小、位置和场景光照关系",
+      "visual_scope": "local",
+      "aliases": [
+        "血月",
+        "血月异象"
+      ]
+    },
+    {
+      "id": "advanced-035",
+      "visual_details": "原有花叶的展开边缘呈纤维与透光层次，生长范围及完成状态严格遵守原分镜",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "advanced-036",
+      "visual_details": "原定威压降临的同一拍，既定区域空气骤然压出透明折射层，前后景光线被拉开强弱差；已有衣料、尘土和人物反应同步显现，随后迅速露出原定姿态，不额外压倒人物或移动物体",
+      "visual_scope": "scene",
+      "aliases": [
+        "威压",
+        "灵压.*(?:倾泻|荡开|扩散)",
+        "威压.*降临"
+      ]
+    },
+    {
+      "id": "advanced-037",
+      "visual_details": "原定视线方向迸出一线短促锐利红光，眼部与背景明暗瞬变，红线随视线收束立即退去；人物原定表情与站位清楚可见，红线只是图形表现，不成为实体攻击",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "advanced-038",
+      "visual_details": "原定漫画背景表现采用层次速度线与局部反差，保持人物轮廓及正式场景身份",
+      "visual_scope": "frame",
+      "aliases": []
+    },
+    {
+      "id": "advanced-039",
+      "visual_details": "原有回忆画面的碎片边缘呈薄层透光，片内人物、内容、出现时点和转场均沿用正式分镜",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "advanced-040",
+      "visual_details": "角色按原定视线变化锁向既定目标，眼底高光随动作收紧，脸部与背景形成清楚明暗反差；焦点跟随原机位运动，人物原定表情与反应完整呈现",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "combat-ranged-muzzle-flash",
+      "visual_details": "既定枪口闪焰的亮芯与透光边缘分层清楚，闪焰对正式分镜已指定受光表面的反光与枪口发光同步；原有余烟保留稀薄透光质感，发射次数、弹道和受光对象不从模板补入",
+      "visual_scope": "local",
+      "aliases": [
+        "枪口闪焰",
+        "枪口火光",
+        "枪口.*喷焰"
+      ]
+    },
+    {
+      "id": "combat-ranged-shell-drop",
+      "visual_details": "既定弹壳保留连续金属高光、壳口厚度与表面余热质感；只对原分镜已有的轻烟、水滴和涟漪细化透光及反射层次，接触位置以原落点为准，不补入积水、反弹或滚动动作",
+      "visual_scope": "local",
+      "aliases": [
+        "弹壳落地",
+        "枪管.*余烟",
+        "枪口余烟",
+        "空仓挂机"
+      ]
+    },
+    {
+      "id": "combat-ranged-cover-impact",
+      "visual_details": "原有石质掩体受击处区分断口颗粒、石屑与薄尘的材质层次，已写出的碎屑反馈贴合原接触面和受力方向；缺口数量、深度、墙体状态与遮挡关系全部沿用正式分镜",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "combat-ranged-rain-flash",
+      "visual_details": "仅对原分镜已有的雨中枪火照明细化雨线亮度层次，既定积水倒影对应同一发光实体与同一时点；水纹对反射的分割沿用原水面状态，不补入降雨、积水、霓虹或新的受击点",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "combat-ranged-armor-hit",
+      "visual_details": "原有装甲受击火花具有亮芯与金属颗粒层次，接触高光贴合原护板曲率，既定金属粉尘保留表面材质特征；火花路径、护板损伤和机体姿态均采用正式分镜，不补入凹陷或位移",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "combat-ranged-energy-shield",
+      "visual_details": "原有能量脉冲与护盾的接触光斑呈透光压缩层次，既定涟漪沿原盾面曲率保持连续纹理；只细化原有能量碎粒的透明度，盾形、波纹圈数、是否穿透或回弹均遵从原可见结果",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "combat-ranged-beam-scorch",
+      "visual_details": "原有光束灼痕的熔融边缘与周围金属区分粗糙度和热亮度，已指定的热扰动、亮屑及薄烟保留贴近接触面的层次；灼痕形状、范围、冷却状态与目标是否贯穿全部沿用原分镜",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "combat-ranged-drone-hit",
+      "visual_details": "仅对原分镜已有的无人机外壳接触火花与尾烟细化金属反光、烟丝透明度和前后遮挡，烟迹贴合已写出的机体路径；不由模板决定倾斜、失速、下降、离画或损伤结果",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "combat-ranged-arrow-release",
+      "visual_details": "既定箭矢尾羽保留纤维层次，原有尾部拖影紧贴已写出的箭轴与运动路径，弓弦材质连续并与既定连接点一致；仅呈现原分镜已有的弦振、衣料或浮尘反馈，不补放箭动作和次数",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "combat-ranged-arrow-follow",
+      "visual_details": "既定箭身与尾羽在原路径上保持统一材质，原木盾接触点已有的木屑呈纤维断面与颗粒层次；箭头和木面的接触边界清楚，是否钉入、箭尾余振及最终落点均以正式分镜为准，不补入跟拍或林地",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "combat-ranged-arrow-rain",
+      "visual_details": "既定箭雨中的箭杆与尾羽保留距离层次，原有接触尘圈区分贴地尘粒与薄雾，尘圈位置逐一对应原落点；箭数、批次、疏密、触地次序和人物距离全部沿用正式分镜",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "combat-ranged-arrow-deflection",
+      "visual_details": "既定箭矢擦盾点的光斑贴合原盾面弧度，已写出的擦痕流光沿同一接触区域保留细窄透光层次，原有光粒保持空间层次；箭路、是否偏转、偏转方向及离画状态均由正式分镜决定",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "combat-ranged-arrow-wood",
+      "visual_details": "既定箭与木柱接触处保留木纹断面、纤维木屑与箭杆材质的差异，已有尾羽余振中的羽片外形保持一致；裂口、钉入深度、箭杆方向和木柱状态均采用原分镜，不增加命中或破裂",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "combat-ranged-fire-arrow",
+      "visual_details": "既定灵火箭轮廓内保留火舌薄层和透光边缘，原有贴石散焰与石面接触处呈一致反光，已有火星及灼痕区分材质层次；箭身变化、火焰范围与石体状态遵从原结果，不补入命中或点燃环境",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "combat-ranged-ice-arrow",
+      "visual_details": "既定霜箭接触区域的冰粒具有透明折射，原盾面霜纹区分细分叉晶体与薄霜，已有寒雾保持贴面透光层次；箭身是否碎裂、冻结范围和盾体状态全部沿用原可见结果",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "combat-ranged-arrow-rope",
+      "visual_details": "仅对原分镜已有的箭矢接触亮点、断索纤维与旗面材质细化透光及表面层次，绳索和布料的连接位置服从既定空间关系；是否断索、旗角下落、箭矢去向与最终悬挂状态不从模板补入",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "combat-melee-fist-foot-chain",
+      "visual_details": "仅细化原分镜已有的护臂接触褶皱、衣料受力纹理与鞋底接触尘迹，已有漫画冲击线贴合各自原定接触点并保持图形表现；不从模板补入拳脚次数、组合顺序、退步或能量实体",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "combat-melee-dodge-counter",
+      "visual_details": "原有衣摆与袖口的褶皱层次对应正式分镜已写出的身体姿态，既定护架接触处的漫画冲击线只作局部图形，脚下原有尘迹服从既定路径；闪空、接触、回击、进退与收势全由原动作决定",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "combat-melee-blade-crossing",
+      "visual_details": "原有实体金属双刃的反光随既定刃面夹角变化，已写出的碰撞火星与接触点相连，刃身保持原材质和尺寸；只细化原有尘迹，交锋次数、方向、分刃与人物反应全部沿用正式分镜",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "combat-melee-airborne-repel",
+      "visual_details": "只细化原分镜已有的光弧、护盾接触凹面和光波边缘的透明度，接触高光落在原定碰撞位置，原有落脚尘粒区分颗粒层次；起跳、浮空、回震、再次攻击与落地次序均不由模板增加或调整",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "combat-melee-staff-pressure",
+      "visual_details": "原有木棍与实体木盾接触处区分木纹、金属包边和积灰，已写出的皮带与盾面受力反馈保持材质连贯，原有尘迹贴合接触面；不补入碰撞次数、回推、进退或超自然护罩",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "combat-melee-shield-brawl",
+      "visual_details": "原有拳甲与能量盾的接触区域区分盾纹、透光层与拳甲表面反射，已写出的压缩亮层和冲击环沿原盾面及原传播方向保持连续；盾纹形状、拳击次数、盾面变化和击退结果全部使用正式分镜",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "combat-melee-corridor-clash",
+      "visual_details": "原有能量刃接触爆点、火星和刃前光弧区分光芯与透光边缘，邻近原有表面的反光对应接触光；保持正式分镜指定的前后遮挡，接触次数、人物进退、光弧范围和场景均不从模板补入",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "combat-melee-heavy-light-counter",
+      "visual_details": "只细化原分镜已有防护壳接触亮纹、光点和弧光的分层透明度，既定残影贴合原身体路径，已有盔甲细尘保留颗粒材质；人物体量、攻击次序、接触数量、闪避与落地结果均采用原稿",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "combat-melee-duo-relay",
+      "visual_details": "原有气浪与盾面接触处保持清晰的透光边界，已写出的受压光纹和脉冲接触亮点各自对应原接触面；光照分层不遮改原有角色关系，支援人物、接力次序、攻击路径与退步结果均不从模板补入",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "combat-melee-depth-stagger",
+      "visual_details": "原有不同距离的火花、光波与盾面圆纹分别保持对应深度的颗粒和透光层次，接触点与原交战对象一一对应；前后景遮挡、人物数量、交锋顺序和明暗设定全部沿用正式分镜",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "combat-melee-small-encirclement",
+      "visual_details": "原有半圆护光的接触亮边贴合既定弧面，已写出的环形气流区分薄层折射与地表反光，所有光层保持原指定空间范围；两翼人物、换侧、碰撞先后、气流传播与退步结果均由正式分镜决定",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "combat-melee-line-impact",
+      "visual_details": "原有实体盾金属包边的接触火星与盾面涂层区分材质，已写出的持盾振动保持连接处连续，鞋底尘迹贴合原地面接触；盾牌数量、搭接关系、阵列、步幅与碰撞结果均沿用正式分镜，不增加光幕",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "combat-melee-air-ground-link",
+      "visual_details": "仅细化原分镜已有的盾面接触波纹与光碎屑，纹理沿原盾面弧度连续，光层位置分别对应原接触区域；空地人物、攻势顺序、接触点数量、盾体收缩和落地位置均不从模板补入",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "combat-melee-shared-shield",
+      "visual_details": "原有共享盾面呈连续透光层，既定受压区域、支援光连接点和浪头接触处保留清楚的亮度边界，原有光屑具有粒子层次；支援人数、连接对象、盾形恢复、人物姿态与施术顺序均沿用正式分镜",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "combat-melee-cover-retreat",
+      "visual_details": "原有能量斩与光刃接触处的火花带保持薄层颗粒，既定光墙的圆纹贴合原墙面，透明度保留正式分镜已指定的前后层次；光墙是否存在、接触次数、撤离路线和人物动作均不从模板补入",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "combat-melee-paired-crossfire",
+      "visual_details": "原有不同交战区域的火星、刃光与接触亮点各自保持材质和深度层次，光迹仅占据正式分镜已有接触区域；人物数量、分区、挥空与接触结果、交错次序和收势均使用原动作",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "info-panel-system",
+      "visual_details": "正式系统面板采用清晰黑体数字与正文，弱暗金底框配深色描边，完整正式条目按显示计划出现并静置可读。字迹不抖动、不强光晕、不新增进度条、数值跳动或未写出的条目；只是画面信息层，不生成实体卡片。颜色、窗口、布局与原有变化沿用正式信息。",
+      "visual_scope": "local",
+      "aliases": [
+        "系统面板",
+        "属性面板",
+        "任务面板",
+        "金色面板",
+        "暗金面板",
+        "面板.*(?:展开|叠加|并列显示|显示)",
+        "金字.*(?:浮现|显示)",
+        "光屏"
+      ]
+    },
+    {
+      "id": "info-tag-label",
+      "visual_details": "正式浮签采用清晰宋体或项目已选字形，暖金或米白文字配深色细描边，淡入后静止可读；完整文字可自然换行，避免强光晕、反复上浮和文字抖动。不遮挡对应人物、脸、手、兵器接触点及正式反应，亮度略低于主光；时窗、归属和位置按逐镜显示计划执行。",
+      "visual_scope": "local",
+      "aliases": [
+        "浮签",
+        "人物浮签",
+        "角色浮签",
+        "场景浮签",
+        "设定浮签",
+        "道具浮签",
+        "名字标注"
+      ]
+    },
+    {
+      "id": "info-stat-compare",
+      "visual_details": "只呈现正式信息已有的对比项、列数、数值和布局，以清晰黑体和稳定文字建立对比。只有正式面板已有进度条时才呈现其原定长度，未写出的进度条、数值跳动和变化不能由模板添加；完整全文、留白位置与显示时窗按正式计划执行。",
+      "visual_scope": "local",
+      "aliases": [
+        "数值面板",
+        "属性对比",
+        "等级.*对比",
+        "并列.*面板"
+      ]
+    },
+    {
+      "id": "restraint-chain-bind",
+      "visual_details": "仅细化正式原句已存在的锁链：链节与已有能量流光沿原定起点、路径和接触部位运动，贴合但不穿透。数量、材质、颜色、缠绕顺序与收紧结果逐项沿用正式动作；未明确为锁链的藤蔓、绳索或泛称束缚不得套用链节，不新增肩臂、脚踝或施术动作。",
+      "visual_scope": "local",
+      "aliases": [
+        "锁链.*(?:射出|投出|甩出)",
+        "锁链.*自袖口",
+        "锁链.*自(?:手|掌心|指)",
+        "能量锁链.*(?:射出|投出)"
+      ]
+    },
+    {
+      "id": "restraint-chain-ground",
+      "visual_details": "仅在正式原句明确存在地面锁链时表现原定链节和接触反馈；锁链数量、地面起点、缠绕部位、绷紧方向与结果全部沿用原文，不固定四条、不补手腕或脚踝、不新增裂纹或法阵。藤蔓、绳索及泛称大地禁锢不得套用锁链材质。",
+      "visual_scope": "local",
+      "aliases": [
+        "锁链.*(?:钉住|钉在|绷直|拉直)",
+        "锁链.*(?:自|从)地面",
+        "锁链.*四肢",
+        "大地禁锢",
+        "锁链.*(?:缠上|缠住).*(?:地面|脚下|地底)"
+      ]
+    },
+    {
+      "id": "restraint-break-free",
+      "visual_details": "仅细化正式原句已经发生的挣脱：按原定束缚材质、脱离路径和结果表现接触边缘变化。原文已有链节崩断才呈现其断口，已有能量碎屑才呈现其散去；藤蔓、绳索、非实体禁锢沿用各自原定材质。不得自动添加断链、伤口、血或第二次发力。",
+      "visual_scope": "local",
+      "aliases": [
+        "挣脱.*(?:锁链|禁锢|束缚)",
+        "挣脱束缚",
+        "震开.*(?:锁链|禁锢)",
+        "崩断.*锁链"
+      ]
+    },
+    {
+      "id": "combat-impact-black-ink",
+      "visual_details": "仅在正式攻击实际命中的同一拍，接触点炸出浓黑墨团与锐利放射墨线，墨线沿原拳路、刀路或能量冲击方向外射；墨色爆开同拍，撞击中心迸出刺亮白光，整幅画面极短闪白，随后立即恢复原场景的明暗与颜色；黑墨随冲击散开，露出原定受击姿态、伤势、环境反馈和结果。攻击与受击按照正式动作节奏连续完成，墨形只作非实体漫画冲击层，不变成新技能、护盾或第二次命中；不改变原有招式次数、人物站位、颜色、声音、对白、OS、浮签及末帧",
+      "visual_scope": "frame",
+      "aliases": []
+    },
+    {
+      "id": "combat-frame-hard-contact-flash",
+      "visual_details": "仅在正式动作已发生非生物目标强碰撞的同一拍，碰撞中心沿原技能颜色骤然爆亮，整幅画面极短闪白；白闪立即退回原场景的明暗与颜色，露出原定护盾、兵刃、巨齿或其他目标的状态及人物反应。画面级白闪不是新攻击，不改变目标是否破裂、穿透、击退或保持完整，也不遮掉原定对白、OS与浮签",
+      "visual_scope": "frame",
+      "aliases": []
+    },
+    {
+      "id": "combat-frame-ground-shock",
+      "visual_details": "仅在正式巨物重击地面并已造成地形反馈的接触同拍，整幅画面对比度短促压缩再恢复；既有落点亮暗骤变，前景碎石、中景尘幕与远景受光沿原冲击方向形成一拍空间传递，随后迅速露出原定深坑、裂纹、沟壑或完整地表。画面脉冲不增加破坏范围、物体位移、第二次落地或人物受伤",
+      "visual_scope": "frame",
+      "aliases": []
+    },
+    {
+      "id": "combat-scenario-hit-flurry",
+      "visual_details": "正式连续命中的每个落点以局部受光和既有衣料、皮毛或尘粒反应形成清楚节拍，非接触间隙整幅画面略压暗；最后一次原定重击让近中远景反差同拍跃起，随后立即恢复原场景光色。各次攻击按原顺序正常速度连续完成，不逐拳白闪、不增加命中次数或伤势",
+      "visual_scope": "frame",
+      "aliases": []
+    },
+    {
+      "id": "combat-scenario-guard-absorbs",
+      "visual_details": "真实受击同拍，整幅画面四周的明暗和空气折射朝原接触点短促收紧，受击者轮廓保持清晰；既有衣料、皮肤或正式分镜指定的护体纹理沿原受力方向压缩后回弹，画面立即恢复原场景光色。原定微晃、后退、站定、伤势和表情完整显露，不新增护盾或反弹",
+      "visual_scope": "frame",
+      "aliases": []
+    },
+    {
+      "id": "combat-scenario-beast-sweep-terrain",
+      "visual_details": "巨兽原有尾、爪或触手沿正式路径疾速横扫，前景肢体、人物与远景地形被运动轨迹斜向分出层次，未命中人物的部分保持明确间距；真正击中原地面或墙体时，亮暗沿攻击轨迹短促横切全画面，近景碎屑、中景尘线、远景受光依次显露后迅速恢复原场景，破坏范围只取原结果",
+      "visual_scope": "scene",
+      "aliases": []
+    },
+    {
+      "id": "combat-scenario-first-breach",
+      "visual_details": "第一次实际破防同拍，整幅画面的背景色阶短促压低，原攻击路径和正式结果已有的第一道伤痕以锐利亮缘成为视觉重心；暗部立即退回原场景光色，显露双方第一次见血或破防的原定反应。若同拍已有爆墨白闪，只共享这一拍冲击，不叠第二次白闪、扩大伤口或提前击倒",
+      "visual_scope": "frame",
+      "aliases": []
+    },
+    {
+      "id": "combat-scenario-weakpoint-strike",
+      "visual_details": "正式分镜已经识别并实际击中的弱点成为画面唯一高对比焦点，人物从原站位沿既定路径压入纵深，前景干扰快速掠开，兵器亮缘直达原弱点；接触同拍恢复完整战场、原定伤势与对手反应。不绘制游戏准星、不创造弱点、额外贯穿或第二击",
+      "visual_scope": "local",
+      "aliases": []
+    },
+    {
+      "id": "combat-scenario-knockback-collision",
+      "visual_details": "真实受击与撞上既有场景物形成两个清楚但不断开的冲击节拍：人物沿原飞退路线迅速穿过前中景，原定撞物点才触发一次全画幅明暗回弹，近景遮挡随原物件形变或倒塌迅速让出，露出原定落地姿态。位移距离、物件损坏、攻击次数只取正式分镜",
+      "visual_scope": "scene",
+      "aliases": []
+    },
+    {
+      "id": "combat-scenario-gate-breach",
+      "visual_details": "巨物按原冲撞方向撞破既有门、闸或墙，接触同拍整幅画面的亮度被破口逆光短促抬起；近景碎片、中景尘幕和后景巨物剪影拉出巨大尺度，尘幕迅速让出原定身形、人物反应和破口范围。逆光只是画面表现，不扩大建筑损坏或增加敌人",
+      "visual_scope": "scene",
+      "aliases": []
+    },
+    {
+      "id": "combat-scenario-blade-armor-scrape",
+      "visual_details": "原刀刃实际贴着既有硬甲或鳞片划过，刀面冷色锐边与甲面暖色摩擦火花形成强反差，亮线贴原接触弧度疾速扫过并立即熄灭；后景短促压暗以显出甲片厚度，随后恢复原场景光色，擦痕与双方反应按正式结果显露，不凭火花制造裂甲或流血",
+      "visual_scope": "local",
+      "aliases": []
+    }
+  ]
+}

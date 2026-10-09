@@ -1,0 +1,10 @@
+.graph-media-image .graph-image-select{display:block;width:100%;padding:0;min-height:90px;background:transparent;border:0;cursor:pointer}
+.graph-media-image .graph-image-select img{width:100%;height:115px;object-fit:contain;border-radius:5px}
+.graph-media-actions{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}.graph-media-actions button{font-size:11px;padding:5px 7px}
+.graph-media-image.focus{outline:2px solid #a9e870}.graph-media-image.bound{border-color:#63894c}
+.graph-journey{padding:10px 16px;background:#202320;border-bottom:1px solid #40483d;color:#dce3d7}.graph-journey>div{display:flex;flex-wrap:wrap;gap:8px}.graph-journey small{display:block;margin-top:7px;color:#b4c1a9}
+.graph-workflow-overlay{position:fixed;inset:74px 12px 12px 180px;z-index:32;overflow:auto;background:#f5f7f3;border:1px solid #809275;border-radius:12px;box-shadow:0 15px 50px #0008}
+.graph-workflow-panel{padding:18px}.graph-workflow-panel>header{position:sticky;top:-18px;z-index:3;display:flex;justify-content:space-between;align-items:center;background:#f5f7f3;padding:12px;margin:-18px -18px 16px;border-bottom:1px solid #ccd5c6}
+.candidate-overlay.canvas-dock{inset:150px 12px 12px auto;width:min(760px,54vw);padding:0;background:transparent;pointer-events:none;align-items:stretch;justify-content:stretch}
+.candidate-overlay.canvas-dock .candidate-workbench{width:100%;max-height:100%;pointer-events:auto;border:1px solid #829a70;box-shadow:0 8px 28px #0008}.candidate-overlay.canvas-dock .candidate-comparison{grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+@media(max-width:850px){.candidate-overlay.canvas-dock{inset:150px 8px 8px 8px;width:auto}.graph-workflow-overlay{left:8px}.graph-journey button{font-size:11px}}

@@ -1,0 +1,20 @@
+const paths:Record<string,string>={
+  more:'<circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/>',
+  arrow:'<path d="M5 12h14m-5-5 5 5-5 5"/>',
+  close:'<path d="m6 6 12 12M6 18 18 6"/>',
+  search:'<circle cx="10" cy="10" r="6"/><path d="m15 15 5 5"/>',
+  refresh:'<path d="M20 7v5h-5M4 17v-5h5"/><path d="M6 7a7 7 0 0 1 12-1l2 3M4 15l2 3a7 7 0 0 0 12-1"/>',
+  'add-file':'<path d="M14 3H5v18h14V8Z"/><path d="M14 3v5h5M8 14h8m-4-4v8"/>',
+  home:'<path d="m3 10 9-7 9 7v10H3Z"/><path d="M9 20v-7h6v7"/>',
+  play:'<path d="m9 5 11 7-11 7Z"/>',
+  folder:'<path d="M3 7V4h6l3 3h9v13H3Z"/>',
+  edit:'<path d="m4 16 12-12 4 4L8 20H4Z"/><path d="m13 7 4 4"/>',
+  person:'<circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/>',
+  scene:'<rect x="3" y="3" width="18" height="18" rx="2"/><path d="m3 17 5-5 4 4 4-7 5 8"/><circle cx="8" cy="7" r="1"/>',
+  prop:'<path d="m12 3 9 5v9l-9 5-9-5V8Z"/><path d="m3 8 9 5 9-5M12 13v9"/>',
+  menu:'<path d="M4 6h16M4 12h16M4 18h16"/>',
+  trash:'<path d="M3 6h18M9 6V3h6v3M5 6l1 15h12l1-15M10 10v7M14 10v7"/>',
+  settings:'<path d="m9 3 1 2h4l1-2 3 2-1 2 2 3h2v4h-2l-2 3 1 2-3 2-1-2h-4l-1 2-3-2 1-2-2-3H3v-4h2l2-3-1-2 3-2Z"/><circle cx="12" cy="12" r="3"/>',
+  film:'<rect x="3" y="4" width="18" height="16" rx="3"/><path d="M7 4v16M17 4v16M3 9h4M3 15h4M17 9h4M17 15h4"/>',
+};
+export const uiIcon=(name:string)=>`<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name]||paths.film}</svg>`;

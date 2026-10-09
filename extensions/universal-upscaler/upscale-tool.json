@@ -1,0 +1,9 @@
+{
+  "id": "wanling-universal-upscaler",
+  "version": "1.0.0",
+  "protocolVersion": 1,
+  "entry": "cli.mjs",
+  "engine": "realesrgan-animevideov3-x2",
+  "platform": "windows-x64",
+  "scale": 2
+}

@@ -1,0 +1,2 @@
+.panel>label.software-update-toggle{display:flex;align-items:center;gap:10px;width:fit-content;min-height:44px;cursor:pointer}
+.software-update-toggle input[type="checkbox"]{width:18px;height:18px;min-height:0;flex:none;margin:0}

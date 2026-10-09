@@ -1,0 +1,51 @@
+name: Windows source checks
+
+on:
+  push:
+    branches: [main, 'codex/**']
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24'
+          cache: npm
+      - name: Install media tools for tests
+        shell: pwsh
+        run: |
+          choco install ffmpeg --version=8.1.1 --no-progress --yes
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          ffmpeg -version
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          ffprobe -version
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - run: npm ci
+      - run: npm run audit:source
+      - run: npm run check
+      - run: npm run build
+      - run: npm test
+      - run: npm run test:smoke
+      - name: Build and verify Windows community installer
+        shell: pwsh
+        run: |
+          $tools = Join-Path $env:RUNNER_TEMP 'wanling-wix'
+          $archive = Join-Path $env:RUNNER_TEMP 'wix314-binaries.zip'
+          Invoke-WebRequest -Uri 'https://github.com/wixtoolset/wix3/releases/download/wix3141rtm/wix314-binaries.zip' -OutFile $archive
+          if ((Get-FileHash -LiteralPath $archive -Algorithm SHA256).Hash.ToLowerInvariant() -ne '6ac824e1642d6f7277d0ed7ea09411a508f6116ba6fae0aa5f2c7daa2ffa43d31') { throw 'WiX archive checksum mismatch' }
+          Expand-Archive -LiteralPath $archive -DestinationPath $tools
+          $env:MANJU_WIX_DIR = $tools
+          npm run package:community
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          $candidate = (Get-ChildItem deliverables -Directory -Filter 'wanling-manju-community-candidate-*' | Sort-Object LastWriteTime | Select-Object -Last 1).FullName
+          npm run package:installer -- $candidate
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          ./scripts/test-community-installer.ps1 -Installer './deliverables/installers/wanling-manju-0.4.24-community-windows-x64.msi'

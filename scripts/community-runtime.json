@@ -1,0 +1,16 @@
+{
+  "node": {
+    "version": "24.21.0",
+    "url": "https://nodejs.org/download/release/v24.21.0/node-v24.21.0-win-x64.zip",
+    "sha256": "158f7685b44de51f6c0df1d153526cbcd3e1bc739a8dfc607721cef75de9e541",
+    "directory": "node-v24.21.0-win-x64"
+  },
+  "ffmpeg": {
+    "version": "9.0.2",
+    "url": "https://github.com/GyanD/codexffmpeg/releases/download/9.0.2/ffmpeg-9.0.2-essentials_build.zip",
+    "sha256": "60f467265b1e312373dbcd92200c2618a74850f98d3d078e94296bb3fa2047ba",
+    "directory": "ffmpeg-9.0.2-essentials_build",
+    "license": "GPL-3.0-or-later",
+    "upstream": "https://www.gyan.dev/ffmpeg/builds/"
+  }
+}
