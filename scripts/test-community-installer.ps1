@@ -32,6 +32,12 @@ try {
         throw ('Desktop shortcut does not reference this installed community edition. Expected: '+$shortcutPath+'; actual arguments: '+$shortcut.Arguments+'; MSI desktop: '+$desktopProperty)
     }
     $result.desktopShortcut = $true
+    $expectedPowerShell = Join-Path $env:SystemRoot 'System32\WindowsPowerShell\v1.0\powershell.exe'
+    if ($shortcut.TargetPath -ne $expectedPowerShell -or -not (Test-Path -LiteralPath $shortcut.TargetPath)) { throw 'Desktop shortcut has an invalid PowerShell target.' }
+    $menuShortcutPath = Join-Path ([Environment]::GetFolderPath('Programs')) '万灵漫剧社区版\万灵漫剧社区版.lnk'
+    $menuShortcut = $shell.CreateShortcut($menuShortcutPath)
+    if (-not (Test-Path -LiteralPath $menuShortcutPath) -or $menuShortcut.TargetPath -ne $expectedPowerShell -or $menuShortcut.Arguments -notlike ('*'+$installRoot+'\scripts\launch-community.ps1*')) { throw 'Start menu shortcut is missing or points to a different installation.' }
+    $result.startMenuShortcut = $true
     $powershell = Join-Path $env:SystemRoot 'System32\WindowsPowerShell\v1.0\powershell.exe'
     & $powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $installRoot 'scripts\launch-community.ps1') -PrepareOnly
     if ($LASTEXITCODE -ne 0) { throw 'First-run runtime preparation failed.' }

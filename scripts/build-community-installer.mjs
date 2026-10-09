@@ -68,6 +68,8 @@ const document = `<?xml version="1.0" encoding="utf-8"?>
    <Directory Id="ProgramMenuFolder"><Directory Id="CommunityMenuFolder" Name="万灵漫剧社区版"/></Directory>
   </Directory>
   <DirectoryRef Id="INSTALLFOLDER"><Component Id="CommunityShortcuts" Guid="{89E7D162-27E6-455A-9552-CE5AB6247EAB}" Win64="yes">
+   <CreateFolder Directory="DesktopFolder"/>
+   <CreateFolder Directory="CommunityMenuFolder"/>
    <Shortcut Id="DesktopShortcut" Directory="DesktopFolder" Name="万灵漫剧社区版" Target="[System64Folder]WindowsPowerShell\\v1.0\\powershell.exe" Arguments="-NoProfile -ExecutionPolicy Bypass -File &quot;[INSTALLFOLDER]scripts\\launch-community.ps1&quot;" WorkingDirectory="INSTALLFOLDER" Icon="AppIcon"/>
    <Shortcut Id="MenuShortcut" Directory="CommunityMenuFolder" Name="万灵漫剧社区版" Target="[System64Folder]WindowsPowerShell\\v1.0\\powershell.exe" Arguments="-NoProfile -ExecutionPolicy Bypass -File &quot;[INSTALLFOLDER]scripts\\launch-community.ps1&quot;" WorkingDirectory="INSTALLFOLDER" Icon="AppIcon"/>
    <RemoveFolder Id="RemoveMenuFolder" Directory="CommunityMenuFolder" On="uninstall"/>
