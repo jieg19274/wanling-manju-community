@@ -2,7 +2,7 @@
 $ErrorActionPreference = 'Stop'
 $appRoot = Split-Path -Parent $PSScriptRoot
 $shell = New-Object -ComObject WScript.Shell
-$shortcut = $shell.CreateShortcut((Join-Path $ShortcutDirectory '万灵漫剧社区版.lnk'))
+$shortcut = $shell.CreateShortcut((Join-Path $ShortcutDirectory '万灵漫剧 社区版.lnk'))
 $shortcut.TargetPath = Join-Path $env:SystemRoot 'System32\WindowsPowerShell\v1.0\powershell.exe'
 $shortcut.Arguments = '-NoProfile -ExecutionPolicy Bypass -File "' + (Join-Path $PSScriptRoot 'launch-community.ps1') + '"'
 $shortcut.WorkingDirectory = $appRoot

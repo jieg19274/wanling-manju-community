@@ -16,7 +16,7 @@
 
 ## 普通用户：下载安装
 
-在 [Releases](https://github.com/jieg19274/wanling-manju-community/releases) 下载 Windows x64 的 `wanling-manju-0.4.24-community-windows-x64.msi`，安装后打开桌面的“万灵漫剧社区版”。
+在 [Releases](https://github.com/jieg19274/wanling-manju-community/releases) 下载 Windows x64 的 `wanling-manju-0.4.24-community-windows-x64.msi`，安装后打开桌面的“万灵漫剧 社区版”。
 
 首次启动会联网从官方渠道准备 Node.js、锁定的 npm 图片依赖及 FFmpeg，并校验下载完整性；不必手动安装 Node.js，不更改系统 PATH。网络准备失败时保留错误记录，修复网络后可以重试。准备完成后在默认浏览器打开本机界面。
 

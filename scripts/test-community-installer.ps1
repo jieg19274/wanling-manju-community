@@ -24,7 +24,7 @@ try {
         }
     }
     $result.filesVerified = $manifest.files.Count
-    $shortcutPath = Join-Path ([Environment]::GetFolderPath('Desktop')) '万灵漫剧社区版.lnk'
+    $shortcutPath = Join-Path ([Environment]::GetFolderPath('Desktop')) '万灵漫剧 社区版.lnk'
     $shell = New-Object -ComObject WScript.Shell
     $shortcut = $shell.CreateShortcut($shortcutPath)
     if (-not (Test-Path -LiteralPath $shortcutPath) -or $shortcut.Arguments -notlike ('*'+$installRoot+'\scripts\launch-community.ps1*')) {
@@ -40,7 +40,7 @@ try {
     $result.desktopShortcut = $true
     $expectedPowerShell = Join-Path $env:SystemRoot 'System32\WindowsPowerShell\v1.0\powershell.exe'
     if ($shortcut.TargetPath -ne $expectedPowerShell -or -not (Test-Path -LiteralPath $shortcut.TargetPath)) { throw 'Desktop shortcut has an invalid PowerShell target.' }
-    $menuShortcutPath = Join-Path ([Environment]::GetFolderPath('Programs')) '万灵漫剧社区版\万灵漫剧社区版.lnk'
+    $menuShortcutPath = Join-Path ([Environment]::GetFolderPath('Programs')) '万灵漫剧 社区版\万灵漫剧 社区版.lnk'
     $menuShortcut = $shell.CreateShortcut($menuShortcutPath)
     if (-not (Test-Path -LiteralPath $menuShortcutPath) -or $menuShortcut.TargetPath -ne $expectedPowerShell -or $menuShortcut.Arguments -notlike ('*'+$installRoot+'\scripts\launch-community.ps1*')) { throw 'Start menu shortcut is missing or points to a different installation.' }
     $result.startMenuShortcut = $true
