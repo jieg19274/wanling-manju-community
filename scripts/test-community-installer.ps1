@@ -26,7 +26,17 @@ try {
     $result.filesVerified = $manifest.files.Count
     $shortcutPath = Join-Path ([Environment]::GetFolderPath('Desktop')) '万灵漫剧 社区版.lnk'
     $shell = New-Object -ComObject WScript.Shell
-    $shortcut = $shell.CreateShortcut($shortcutPath)
+    function Read-InstalledShortcut([string]$Path, [string]$ProbeName) {
+        if (-not (Test-Path -LiteralPath $Path)) { throw ('Installed shortcut is missing: '+$Path) }
+        # WScript's file loader uses the system ANSI code page. A Chinese name
+        # returns an empty shortcut on the English CI runner. Read an unchanged
+        # byte-for-byte copy with an ASCII name; never Save or repair the link.
+        $probe = Join-Path $validationRoot ($ProbeName+'.lnk')
+        [IO.File]::Copy($Path, $probe, $true)
+        if ((Get-FileHash -LiteralPath $Path -Algorithm SHA256).Hash -ne (Get-FileHash -LiteralPath $probe -Algorithm SHA256).Hash) { throw 'Shortcut inspection copy differs from the installed file.' }
+        return $shell.CreateShortcut($probe)
+    }
+    $shortcut = Read-InstalledShortcut $shortcutPath 'desktop-shortcut-probe'
     if (-not (Test-Path -LiteralPath $shortcutPath) -or $shortcut.Arguments -notlike ('*'+$installRoot+'\scripts\launch-community.ps1*')) {
         $desktopProperty = (Select-String -LiteralPath $installLog -Pattern 'DesktopFolder = ' | Select-Object -Last 2 | ForEach-Object { $_.Line }) -join '; '
         Select-String -LiteralPath $installLog -Pattern '1909|CreateShortcuts|CommunityShortcuts' | Select-Object -Last 15 | ForEach-Object { Write-Host $_.Line }
@@ -41,10 +51,16 @@ try {
     $expectedPowerShell = Join-Path $env:SystemRoot 'System32\WindowsPowerShell\v1.0\powershell.exe'
     if ($shortcut.TargetPath -ne $expectedPowerShell -or -not (Test-Path -LiteralPath $shortcut.TargetPath)) { throw 'Desktop shortcut has an invalid PowerShell target.' }
     $menuShortcutPath = Join-Path ([Environment]::GetFolderPath('Programs')) '万灵漫剧 社区版\万灵漫剧 社区版.lnk'
-    $menuShortcut = $shell.CreateShortcut($menuShortcutPath)
+    $menuShortcut = Read-InstalledShortcut $menuShortcutPath 'menu-shortcut-probe'
     if (-not (Test-Path -LiteralPath $menuShortcutPath) -or $menuShortcut.TargetPath -ne $expectedPowerShell -or $menuShortcut.Arguments -notlike ('*'+$installRoot+'\scripts\launch-community.ps1*')) { throw 'Start menu shortcut is missing or points to a different installation.' }
     $result.startMenuShortcut = $true
     $powershell = Join-Path $env:SystemRoot 'System32\WindowsPowerShell\v1.0\powershell.exe'
+    $zipShortcutDirectory = Join-Path $validationRoot ('unicode-shortcut-'+[char]::ConvertFromUtf32(0x1F600))
+    & $powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $installRoot 'scripts\make-community-shortcut.ps1') -ShortcutDirectory $zipShortcutDirectory
+    if ($LASTEXITCODE -ne 0) { throw 'ZIP shortcut creation failed for a Unicode filename.' }
+    $zipShortcut = Read-InstalledShortcut (Join-Path $zipShortcutDirectory '万灵漫剧 社区版.lnk') 'zip-shortcut-probe'
+    if ($zipShortcut.TargetPath -ne $expectedPowerShell -or $zipShortcut.Arguments -notlike ('*'+$installRoot+'\scripts\launch-community.ps1*')) { throw 'ZIP shortcut has an incorrect launch command.' }
+    $result.zipUnicodeShortcut = $true
     & $powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $installRoot 'scripts\launch-community.ps1') -PrepareOnly
     if ($LASTEXITCODE -ne 0) { throw 'First-run runtime preparation failed.' }
     $result.firstRunPreparation = $true
