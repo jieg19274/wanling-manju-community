@@ -22,11 +22,17 @@ jobs:
       - name: Install media tools for tests
         shell: pwsh
         run: |
-          choco install ffmpeg --version=8.1.1 --no-progress --yes
+          $mediaConfig = (Get-Content scripts/community-runtime.json -Raw | ConvertFrom-Json).ffmpeg
+          $mediaArchive = Join-Path $env:RUNNER_TEMP 'ffmpeg-community-tests.zip'
+          $mediaDirectory = Join-Path $env:RUNNER_TEMP 'ffmpeg-community-tests'
+          Invoke-WebRequest -Uri $mediaConfig.url -OutFile $mediaArchive
+          if ((Get-FileHash -LiteralPath $mediaArchive -Algorithm SHA256).Hash.ToLowerInvariant() -ne $mediaConfig.sha256) { throw 'FFmpeg archive checksum mismatch' }
+          Expand-Archive -LiteralPath $mediaArchive -DestinationPath $mediaDirectory
+          $mediaBin = Join-Path (Join-Path $mediaDirectory $mediaConfig.directory) 'bin'
+          $mediaBin | Out-File -LiteralPath $env:GITHUB_PATH -Encoding utf8 -Append
+          & (Join-Path $mediaBin 'ffmpeg.exe') -version
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          ffmpeg -version
-          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          ffprobe -version
+          & (Join-Path $mediaBin 'ffprobe.exe') -version
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
       - run: npm ci
       - run: npm run audit:source
