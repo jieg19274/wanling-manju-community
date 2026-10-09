@@ -29,6 +29,12 @@ try {
     $shortcut = $shell.CreateShortcut($shortcutPath)
     if (-not (Test-Path -LiteralPath $shortcutPath) -or $shortcut.Arguments -notlike ('*'+$installRoot+'\scripts\launch-community.ps1*')) {
         $desktopProperty = (Select-String -LiteralPath $installLog -Pattern 'DesktopFolder = ' | Select-Object -Last 2 | ForEach-Object { $_.Line }) -join '; '
+        Select-String -LiteralPath $installLog -Pattern '1909|CreateShortcuts|CommunityShortcuts' | Select-Object -Last 15 | ForEach-Object { Write-Host $_.Line }
+        Write-Host ('Desktop directory exists: '+(Test-Path -LiteralPath ([Environment]::GetFolderPath('Desktop'))))
+        foreach ($linkFile in (Get-ChildItem -LiteralPath ([Environment]::GetFolderPath('Desktop')) -Filter '*.lnk' -ErrorAction SilentlyContinue)) {
+            $link = $shell.CreateShortcut($linkFile.FullName)
+            if ($link.Arguments -like ('*'+$installRoot+'*') -or $linkFile.Name -match 'Wanling|万灵') { Write-Host ('Related shortcut: '+$linkFile.Name+'; '+$link.Arguments) }
+        }
         throw ('Desktop shortcut does not reference this installed community edition. Expected: '+$shortcutPath+'; actual arguments: '+$shortcut.Arguments+'; MSI desktop: '+$desktopProperty)
     }
     $result.desktopShortcut = $true
