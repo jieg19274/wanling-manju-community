@@ -2,7 +2,25 @@
 
 **在自己的 Windows 电脑上，把原文、剧本、角色、分镜和视频制作放进同一个工作台。**
 
-[下载安装包](https://github.com/jieg19274/wanling-manju-community/releases/tag/v0.4.24-community.1) · [安装与使用](docs/社区版安装说明.md) · [制作教程](docs/新手制作全流程.md) · [反馈问题](https://github.com/jieg19274/wanling-manju-community/issues) · [Apache-2.0](LICENSE)
+[下载安装包](https://github.com/jieg19274/wanling-manju-community/releases/tag/v0.4.24-community.1) · [软件截图](#软件截图) · [微信联系](#联系作者与反馈) · [安装与使用](docs/社区版安装说明.md) · [制作教程](docs/新手制作全流程.md) · [反馈问题](https://github.com/jieg19274/wanling-manju-community/issues) · [Apache-2.0](LICENSE)
+
+<!-- screenshot-gallery:start -->
+## 软件截图
+
+以下为软件真实界面，使用内置公开演示项目。点击图片可查看原图。
+
+**项目首页：创建作品、搜索项目和打开演示。**
+
+[![万灵漫剧项目首页](docs/screenshots/home.jpg)](docs/screenshots/home.jpg)
+
+**制作画布：把剧本、角色与场景、分镜和视频连接起来。**
+
+[![万灵漫剧制作画布](docs/screenshots/canvas.jpg)](docs/screenshots/canvas.jpg)
+
+**视频预览：在工作台中查看已有片段。**
+
+[![万灵漫剧视频预览](docs/screenshots/video-preview.jpg)](docs/screenshots/video-preview.jpg)
+<!-- screenshot-gallery:end -->
 
 ## 可以做什么
 
@@ -51,6 +69,17 @@ npm run package:community
 锁定正式剧本后，下游分镜和提示词须保持剧情、对白、OS、浮签、系统信息与因果动作一致；过载时拆段。候选选用、参考图审核与视频审片分别完成。远端结果未知时先恢复原任务，避免重复收费。
 
 使用流程见 [新手制作全流程](docs/新手制作全流程.md) 和 [演示教程](docs/试用版演示教程.md)。Agent 接入使用 `npm run agent -- connect` 或 `npm run mcp`，见 [AGENT_START.md](AGENT_START.md)。
+
+<!-- author-contact:start -->
+## 联系作者与反馈
+
+- 微信交流：打开 [作者微信联系二维码](assets/release/contact-wechat.jpg)，用微信扫码添加好友。
+- 使用问题和功能建议：提交 [GitHub Issue](https://github.com/jieg19274/wanling-manju-community/issues)。请说明软件版本、操作步骤和报错信息，不要发送模型密钥。
+
+<img src="assets/release/contact-wechat.jpg" alt="作者微信联系二维码" width="240">
+
+MSI 和 ZIP 都附有“联系与反馈.md”和“微信联系二维码.jpg”。MSI 默认安装目录为 `%LOCALAPPDATA%\WanlingManjuCommunity`；ZIP 用户直接在解压目录打开这两个文件。
+<!-- author-contact:end -->
 
 ## 参与和许可
 
