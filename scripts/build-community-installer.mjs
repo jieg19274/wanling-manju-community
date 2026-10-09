@@ -56,6 +56,7 @@ const document = `<?xml version="1.0" encoding="utf-8"?>
  <Product Id="${productCode}" Name="万灵漫剧社区版" Language="2052" Codepage="936" Version="${xml(version)}" Manufacturer="jieg19274" UpgradeCode="{E752D2FA-CB71-44AF-85A4-152F7E892AB5}">
   <Package InstallerVersion="500" Compressed="yes" InstallScope="perUser" InstallPrivileges="limited" Platform="x64" SummaryCodepage="936" Description="万灵漫剧社区版 Windows x64"/>
   <MajorUpgrade DowngradeErrorMessage="已安装更新的万灵漫剧社区版。"/>
+  <Property Id="INSTALLFOLDER"><RegistrySearch Id="PreviousInstallationRoot" Root="HKCU" Key="Software\\WanlingManjuCommunity" Name="InstallationRoot" Type="raw" Win64="yes"/></Property>
   <MediaTemplate EmbedCab="yes"/>
   <Property Id="ARPCOMMENTS" Value="Apache-2.0 社区版；首次启动联网准备官方运行依赖。"/>
   <Property Id="ARPURLINFOABOUT" Value="https://github.com/jieg19274/wanling-manju-community"/>
